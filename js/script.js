@@ -331,8 +331,8 @@ function loadNews() {
         return;
     }
     
-    // 最新5件のお知らせを表示
-    const recentNews = newsData.slice(0, 5);
+    // 最新2件のお知らせを表示
+    const recentNews = newsData.slice(0, 2);
     
     newsContainer.innerHTML = recentNews.map(item => `
         <div class="news-item">
