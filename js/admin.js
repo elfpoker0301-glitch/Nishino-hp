@@ -3,6 +3,31 @@
 // パスワード設定（本番環境では環境変数を使用）
 const ADMIN_PASSWORD = 'nishibo2024';
 
+// 画像選択の更新
+function updateImageInput() {
+    const select = document.getElementById('workImageSelect');
+    const input = document.getElementById('workImage');
+    const preview = document.getElementById('workImagePreview');
+    
+    if (select.value) {
+        input.value = select.value;
+        showImagePreview(select.value, preview);
+    } else {
+        preview.innerHTML = '';
+    }
+}
+
+// 画像プレビューの表示
+function showImagePreview(imagePath, previewElement) {
+    if (imagePath) {
+        const fileName = imagePath.split('/').pop();
+        previewElement.innerHTML = `
+            <img src="${imagePath}" alt="プレビュー" onerror="this.style.display='none'">
+            <div class="preview-filename">${fileName}</div>
+        `;
+    }
+}
+
 // 初期化
 document.addEventListener('DOMContentLoaded', function() {
     // ログイン状態をチェック
@@ -16,6 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 施工実績フォームのイベントリスナー
     document.getElementById('worksForm').addEventListener('submit', handleWorksSubmit);
+    
+    // 画像入力フィールドのイベントリスナー
+    document.getElementById('workImage').addEventListener('input', function() {
+        const preview = document.getElementById('workImagePreview');
+        showImagePreview(this.value, preview);
+    });
     
     // データを読み込み
     loadNews();
@@ -211,6 +242,12 @@ function showStatusMessage(containerId, message, type) {
 // フォームクリア
 function clearForm(formId) {
     document.getElementById(formId).reset();
+    
+    // 施工実績フォームの場合、画像プレビューもクリア
+    if (formId === 'worksForm') {
+        document.getElementById('workImagePreview').innerHTML = '';
+        document.getElementById('workImageSelect').value = '';
+    }
 }
 
 // カテゴリ名取得

@@ -106,6 +106,44 @@
         .btn-admin:hover {
             background: #1d4ed8;
         }
+
+        .image-select-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .image-select-container select {
+            padding: 0.8rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .select-separator {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        .image-preview {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .image-preview img {
+            max-width: 200px;
+            max-height: 150px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .preview-filename {
+            margin-top: 0.5rem;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
         
         .btn-danger {
             background: #dc2626;
@@ -294,8 +332,21 @@
                             <textarea id="workDescription" name="description" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="workImage">画像URL</label>
-                            <input type="url" id="workImage" name="image" placeholder="https://example.com/image.jpg">
+                            <label for="workImage">画像選択</label>
+                            <div class="image-select-container">
+                                <select id="workImageSelect" name="imageSelect" onchange="updateImageInput()">
+                                    <option value="">-- 既存の画像から選択 --</option>
+                                    <option value="images/sample/work1.jpg">work1.jpg</option>
+                                    <option value="images/sample/work2.jpg">work2.jpg</option>
+                                    <option value="images/sample/work3.jpg">work3.jpg</option>
+                                    <option value="images/sample/hero-bg.jpg">hero-bg.jpg</option>
+                                    <option value="images/sample/office.jpg">office.jpg</option>
+                                    <option value="images/sample/team.jpg">team.jpg</option>
+                                </select>
+                                <span class="select-separator">または</span>
+                                <input type="text" id="workImage" name="image" placeholder="直接入力: images/sample/new-image.jpg">
+                            </div>
+                            <div class="image-preview" id="workImagePreview"></div>
                         </div>
                         <button type="submit" class="btn-admin">追加</button>
                         <button type="button" class="btn-admin" onclick="clearForm('worksForm')" style="background: #6b7280;">クリア</button>
