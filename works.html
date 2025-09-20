@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工事実績 | 株式会社ニシボ</title>
+    <meta name="description" content="株式会社ニシボの工事実績。ダイヤモンドコア工事、アンカー工事、非破壊検査など30数年の豊富な実績をご紹介します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/nishibo-logo.svg" alt="株式会社ニシボ ロゴ">
+                    <a href="index.html">NISHIBO</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">ホーム</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">会社概要</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="greeting.html" class="nav-link">代表挨拶</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#services" class="nav-link">事業案内</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="works.html" class="nav-link active">工事実績</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="branches.html" class="nav-link">支店情報</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="recruit.html" class="nav-link">採用情報</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#contact" class="nav-link">お問い合わせ</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- ページヒーロー -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1 class="page-title">工事実績</h1>
+                    <p class="page-subtitle">30数年の経験と実績</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- フィルター -->
+        <section class="works-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">すべて</button>
+                    <button class="filter-btn" data-filter="core">ダイヤモンドコア</button>
+                    <button class="filter-btn" data-filter="anchor">アンカー工事</button>
+                    <button class="filter-btn" data-filter="inspection">非破壊検査</button>
+                    <button class="filter-btn" data-filter="other">その他</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工事実績グリッド -->
+        <section class="works-grid">
+            <div class="container">
+                <div class="works-container">
+                    <div class="work-item" data-category="core">
+                        <div class="work-image">
+                            <img src="images/sample/work1.jpg" alt="ダイヤモンドコア工事実績">
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">大型商業施設コア工事</h3>
+                            <p class="work-category">ダイヤモンドコア工事</p>
+                            <p class="work-description">φ300mmコア穿孔工事。厚さ500mmのコンクリート壁への配管貫通工事を高精度で実施。</p>
+                            <div class="work-details">
+                                <span class="detail-item">施工面積: 50箇所</span>
+                                <span class="detail-item">工期: 5日間</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item" data-category="anchor">
+                        <div class="work-image">
+                            <img src="images/sample/work2.jpg" alt="アンカー工事実績">
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">高層マンション耐震補強</h3>
+                            <p class="work-category">アンカー工事</p>
+                            <p class="work-description">築30年高層マンションの耐震補強工事。ケミカルアンカー500本の施工を実施。</p>
+                            <div class="work-details">
+                                <span class="detail-item">アンカー本数: 500本</span>
+                                <span class="detail-item">工期: 15日間</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item" data-category="inspection">
+                        <div class="work-image">
+                            <img src="images/sample/work3.jpg" alt="非破壊検査実績">
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">橋梁点検業務</h3>
+                            <p class="work-category">非破壊検査</p>
+                            <p class="work-description">重要橋梁の定期点検業務。超音波探傷検査により内部欠陥の有無を確認。</p>
+                            <div class="work-details">
+                                <span class="detail-item">検査箇所: 200箇所</span>
+                                <span class="detail-item">工期: 10日間</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item" data-category="core">
+                        <div class="work-image">
+                            <img src="images/sample/office.jpg" alt="オフィスビルコア工事">
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">オフィスビル改修工事</h3>
+                            <p class="work-category">ダイヤモンドコア工事</p>
+                            <p class="work-description">既存オフィスビルの設備改修に伴うコア穿孔工事。各階への配管・配線ルート確保。</p>
+                            <div class="work-details">
+                                <span class="detail-item">施工面積: 120箇所</span>
+                                <span class="detail-item">工期: 12日間</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item" data-category="anchor">
+                        <div class="work-image">
+                            <img src="images/sample/hero-bg.jpg" alt="工場設備アンカー工事">
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">工場設備基礎工事</h3>
+                            <p class="work-category">アンカー工事</p>
+                            <p class="work-description">大型製造設備の基礎アンカー工事。高強度アンカーボルトによる確実な固定。</p>
+                            <div class="work-details">
+                                <span class="detail-item">アンカー本数: 80本</span>
+                                <span class="detail-item">工期: 8日間</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item" data-category="inspection">
+                        <div class="work-image">
+                            <img src="images/sample/team.jpg" alt="構造物点検">
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">トンネル構造物点検</h3>
+                            <p class="work-category">非破壊検査</p>
+                            <p class="work-description">高速道路トンネルの構造物点検業務。レーダー探査による内部状況調査。</p>
+                            <div class="work-details">
+                                <span class="detail-item">検査延長: 2km</span>
+                                <span class="detail-item">工期: 20日間</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 実績統計 -->
+        <section class="works-stats">
+            <div class="container">
+                <h2 class="section-title">実績統計</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">1,500+</div>
+                        <div class="stat-label">コア穿孔件数</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3,000+</div>
+                        <div class="stat-label">アンカー施工本数</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">検査実施件数</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">年間の経験</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 主要取引先 -->
+        <section class="major-clients">
+            <div class="container">
+                <h2 class="section-title">主要取引先</h2>
+                <div class="clients-grid">
+                    <div class="client-category">
+                        <h3>建設会社</h3>
+                        <ul class="client-list">
+                            <li>大手ゼネコン各社</li>
+                            <li>地域中堅建設会社</li>
+                            <li>専門工事業者</li>
+                        </ul>
+                    </div>
+                    <div class="client-category">
+                        <h3>官公庁</h3>
+                        <ul class="client-list">
+                            <li>国土交通省関連</li>
+                            <li>都道府県・市町村</li>
+                            <li>公共施設管理者</li>
+                        </ul>
+                    </div>
+                    <div class="client-category">
+                        <h3>民間企業</h3>
+                        <ul class="client-list">
+                            <li>製造業</li>
+                            <li>不動産関連企業</li>
+                            <li>インフラ関連企業</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>Nishibo</h3>
+                        <p>株式会社ニシボ</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>事業案内</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">ダイヤモンドコア工事</a></li>
+                        <li><a href="index.html#services">アンカー工事</a></li>
+                        <li><a href="index.html#services">非破壊検査</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="greeting.html">代表挨拶</a></li>
+                        <li><a href="branches.html">支店情報</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>お問い合わせ</h4>
+                    <div class="footer-contact">
+                        <p><strong>本社</strong></p>
+                        <p>〒811-1311<br>福岡県福岡市南区横手3丁目39-19</p>
+                        <p>TEL: 092-592-6533<br>FAX: 092-592-6534</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nishibo Corporation. All rights reserved. | <a href="privacy.html">プライバシーポリシー</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // フィルター機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const workItems = document.querySelectorAll('.work-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // アクティブボタンの切り替え
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // アイテムの表示/非表示
+                    workItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
