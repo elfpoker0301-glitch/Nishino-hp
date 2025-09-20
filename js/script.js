@@ -319,4 +319,56 @@ window.addEventListener('resize', () => {
     }
 });
 
+// お知らせ読み込み関数
+function loadNews() {
+    const newsContainer = document.getElementById('news-items');
+    const newsData = JSON.parse(localStorage.getItem('news') || '[]');
+    
+    if (!newsContainer) return;
+    
+    if (newsData.length === 0) {
+        newsContainer.innerHTML = '<p class="no-news">お知らせはありません。</p>';
+        return;
+    }
+    
+    // 最新5件のお知らせを表示
+    const recentNews = newsData.slice(0, 5);
+    
+    newsContainer.innerHTML = recentNews.map(item => `
+        <div class="news-item">
+            <div class="news-date">${formatDate(item.date)}</div>
+            <div class="news-category category-${item.category}">${getCategoryName(item.category)}</div>
+            <div class="news-title">${item.title}</div>
+            <div class="news-content">${item.content}</div>
+        </div>
+    `).join('');
+}
+
+// 日付フォーマット関数
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}.${month}.${day}`;
+}
+
+// カテゴリ名取得関数
+function getCategoryName(category) {
+    const categories = {
+        'info': 'お知らせ',
+        'work': '施工情報', 
+        'important': '重要'
+    };
+    return categories[category] || category;
+}
+
+// ページ読み込み時にお知らせを読み込み（ホームページのみ）
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+        // お知らせを読み込み
+        loadNews();
+    }
+});
+
 console.log('Corporate website scripts loaded successfully!');

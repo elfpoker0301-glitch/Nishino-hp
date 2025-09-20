@@ -71,10 +71,9 @@
             <div class="container">
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">すべて</button>
-                    <button class="filter-btn" data-filter="core">ダイヤモンドコア</button>
+                    <button class="filter-btn" data-filter="diamond-core">ダイヤモンドコア</button>
                     <button class="filter-btn" data-filter="anchor">アンカー工事</button>
                     <button class="filter-btn" data-filter="inspection">非破壊検査</button>
-                    <button class="filter-btn" data-filter="other">その他</button>
                 </div>
             </div>
         </section>
@@ -82,95 +81,10 @@
         <!-- 工事実績グリッド -->
         <section class="works-grid">
             <div class="container">
-                <div class="works-container">
-                    <div class="work-item" data-category="core">
-                        <div class="work-image">
-                            <img src="images/sample/work1.jpg" alt="ダイヤモンドコア工事実績">
-                        </div>
-                        <div class="work-info">
-                            <h3 class="work-title">大型商業施設コア工事</h3>
-                            <p class="work-category">ダイヤモンドコア工事</p>
-                            <p class="work-description">φ300mmコア穿孔工事。厚さ500mmのコンクリート壁への配管貫通工事を高精度で実施。</p>
-                            <div class="work-details">
-                                <span class="detail-item">施工面積: 50箇所</span>
-                                <span class="detail-item">工期: 5日間</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="work-item" data-category="anchor">
-                        <div class="work-image">
-                            <img src="images/sample/work2.jpg" alt="アンカー工事実績">
-                        </div>
-                        <div class="work-info">
-                            <h3 class="work-title">高層マンション耐震補強</h3>
-                            <p class="work-category">アンカー工事</p>
-                            <p class="work-description">築30年高層マンションの耐震補強工事。ケミカルアンカー500本の施工を実施。</p>
-                            <div class="work-details">
-                                <span class="detail-item">アンカー本数: 500本</span>
-                                <span class="detail-item">工期: 15日間</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="work-item" data-category="inspection">
-                        <div class="work-image">
-                            <img src="images/sample/work3.jpg" alt="非破壊検査実績">
-                        </div>
-                        <div class="work-info">
-                            <h3 class="work-title">橋梁点検業務</h3>
-                            <p class="work-category">非破壊検査</p>
-                            <p class="work-description">重要橋梁の定期点検業務。超音波探傷検査により内部欠陥の有無を確認。</p>
-                            <div class="work-details">
-                                <span class="detail-item">検査箇所: 200箇所</span>
-                                <span class="detail-item">工期: 10日間</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="work-item" data-category="core">
-                        <div class="work-image">
-                            <img src="images/sample/office.jpg" alt="オフィスビルコア工事">
-                        </div>
-                        <div class="work-info">
-                            <h3 class="work-title">オフィスビル改修工事</h3>
-                            <p class="work-category">ダイヤモンドコア工事</p>
-                            <p class="work-description">既存オフィスビルの設備改修に伴うコア穿孔工事。各階への配管・配線ルート確保。</p>
-                            <div class="work-details">
-                                <span class="detail-item">施工面積: 120箇所</span>
-                                <span class="detail-item">工期: 12日間</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="work-item" data-category="anchor">
-                        <div class="work-image">
-                            <img src="images/sample/hero-bg.jpg" alt="工場設備アンカー工事">
-                        </div>
-                        <div class="work-info">
-                            <h3 class="work-title">工場設備基礎工事</h3>
-                            <p class="work-category">アンカー工事</p>
-                            <p class="work-description">大型製造設備の基礎アンカー工事。高強度アンカーボルトによる確実な固定。</p>
-                            <div class="work-details">
-                                <span class="detail-item">アンカー本数: 80本</span>
-                                <span class="detail-item">工期: 8日間</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="work-item" data-category="inspection">
-                        <div class="work-image">
-                            <img src="images/sample/team.jpg" alt="構造物点検">
-                        </div>
-                        <div class="work-info">
-                            <h3 class="work-title">トンネル構造物点検</h3>
-                            <p class="work-category">非破壊検査</p>
-                            <p class="work-description">高速道路トンネルの構造物点検業務。レーダー探査による内部状況調査。</p>
-                            <div class="work-details">
-                                <span class="detail-item">検査延長: 2km</span>
-                                <span class="detail-item">工期: 20日間</span>
-                            </div>
-                        </div>
+                <div class="works-container" id="works-container">
+                    <!-- 動的に生成されるコンテンツ -->
+                    <div class="no-works" id="no-works" style="display: none;">
+                        <p>該当する工事実績がありません。</p>
                     </div>
                 </div>
             </div>
@@ -280,11 +194,87 @@
     <!-- JavaScript -->
     <script src="js/script.js"></script>
     <script>
-        // フィルター機能
+        // 工事実績の動的読み込み
         document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const workItems = document.querySelectorAll('.work-item');
+            loadWorks();
+            initializeFilter();
+        });
 
+        function loadWorks() {
+            const worksContainer = document.getElementById('works-container');
+            const noWorksMessage = document.getElementById('no-works');
+            const worksData = JSON.parse(localStorage.getItem('works') || '[]');
+            
+            // 既存のwork-itemを削除
+            const existingItems = worksContainer.querySelectorAll('.work-item');
+            existingItems.forEach(item => item.remove());
+            
+            if (worksData.length === 0) {
+                noWorksMessage.style.display = 'block';
+                return;
+            }
+            
+            noWorksMessage.style.display = 'none';
+            
+            // 工事実績アイテムを生成
+            worksData.forEach((work, index) => {
+                const workItem = createWorkItem(work);
+                worksContainer.insertBefore(workItem, noWorksMessage);
+                
+                // アニメーション遅延
+                setTimeout(() => {
+                    workItem.style.opacity = '1';
+                    workItem.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        }
+
+        function createWorkItem(work) {
+            const workItem = document.createElement('div');
+            workItem.className = 'work-item';
+            workItem.setAttribute('data-category', work.category);
+            workItem.style.opacity = '0';
+            workItem.style.transform = 'translateY(20px)';
+            workItem.style.transition = 'all 0.6s ease';
+            
+            workItem.innerHTML = `
+                <div class="work-image">
+                    <img src="${work.image || 'images/sample/work1.jpg'}" alt="${work.title}" onerror="this.src='images/sample/work1.jpg'">
+                </div>
+                <div class="work-info">
+                    <h3 class="work-title">${work.title}</h3>
+                    <p class="work-category">${getWorkCategoryDisplayName(work.category)}</p>
+                    <p class="work-location">${work.location}</p>
+                    <p class="work-description">${work.description}</p>
+                    <div class="work-details">
+                        <span class="detail-item">施工日: ${formatDate(work.date)}</span>
+                    </div>
+                </div>
+            `;
+            
+            return workItem;
+        }
+
+        function getWorkCategoryDisplayName(category) {
+            const categories = {
+                'diamond-core': 'ダイヤモンドコア工事',
+                'anchor': 'アンカー工事',
+                'inspection': '非破壊検査'
+            };
+            return categories[category] || category;
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}年${month}月${day}日`;
+        }
+
+        function initializeFilter() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const filter = button.getAttribute('data-filter');
@@ -294,24 +284,32 @@
                     button.classList.add('active');
                     
                     // アイテムの表示/非表示
-                    workItems.forEach(item => {
-                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                            item.style.display = 'block';
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'translateY(0)';
-                            }, 50);
-                        } else {
-                            item.style.opacity = '0';
-                            item.style.transform = 'translateY(20px)';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300);
-                        }
-                    });
+                    filterWorkItems(filter);
                 });
             });
-        });
+        }
+
+        function filterWorkItems(filter) {
+            const workItems = document.querySelectorAll('.work-item');
+            
+            workItems.forEach((item, index) => {
+                const category = item.getAttribute('data-category');
+                
+                if (filter === 'all' || category === filter) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, index * 50);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
     </script>
 </body>
 </html>
