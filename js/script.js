@@ -321,13 +321,13 @@ window.addEventListener('resize', () => {
 
 // お知らせ読み込み関数
 function loadNews() {
-    const newsContainer = document.getElementById('news-items');
+    const newsContainer = document.getElementById('news-list');
     const newsData = JSON.parse(localStorage.getItem('news') || '[]');
     
     if (!newsContainer) return;
     
     if (newsData.length === 0) {
-        newsContainer.innerHTML = '<p class="no-news">お知らせはありません。</p>';
+        newsContainer.innerHTML = '<div class="no-news"><p>お知らせはありません。</p></div>';
         return;
     }
     
@@ -336,10 +336,14 @@ function loadNews() {
     
     newsContainer.innerHTML = recentNews.map(item => `
         <div class="news-item">
-            <div class="news-date">${formatDate(item.date)}</div>
-            <div class="news-category category-${item.category}">${getCategoryName(item.category)}</div>
-            <div class="news-title">${item.title}</div>
-            <div class="news-content">${item.content}</div>
+            <div class="news-meta">
+                <div class="news-date">${formatDate(item.date)}</div>
+                <div class="news-category category-${item.category}">${getCategoryName(item.category)}</div>
+            </div>
+            <div class="news-content">
+                <h3 class="news-title">${item.title}</h3>
+                <p class="news-excerpt">${item.content}</p>
+            </div>
         </div>
     `).join('');
 }
