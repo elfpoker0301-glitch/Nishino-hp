@@ -370,9 +370,74 @@ function getCategoryName(category) {
 // ページ読み込み時にお知らせを読み込み（ホームページのみ）
 document.addEventListener('DOMContentLoaded', () => {
     if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+        // サンプルデータを初期化
+        initializeSampleData();
         // お知らせを読み込み
         loadNews();
     }
 });
+
+// サンプルデータの初期化（初回のみ）
+function initializeSampleData() {
+    if (!localStorage.getItem('news')) {
+        const sampleNews = [
+            {
+                id: 1,
+                title: 'ホームページをリニューアルしました',
+                category: 'info',
+                content: '株式会社ニシボのホームページを全面リニューアルいたしました。',
+                date: '2024-01-15'
+            },
+            {
+                id: 2,
+                title: '大型商業施設のダイヤモンドコア工事を受注',
+                category: 'work',
+                content: '東京都内の大型商業施設におけるダイヤモンドコア工事を受注いたしました。',
+                date: '2024-01-10'
+            },
+            {
+                id: 3,
+                title: '年末年始休業のお知らせ',
+                category: 'important',
+                content: '12月29日から1月3日まで年末年始休業とさせていただきます。',
+                date: '2023-12-25'
+            }
+        ];
+        localStorage.setItem('news', JSON.stringify(sampleNews));
+    }
+    
+    if (!localStorage.getItem('works')) {
+        const sampleWorks = [
+            {
+                id: 1,
+                title: '商業ビル基礎工事',
+                category: 'diamond-core',
+                location: '東京都渋谷区',
+                description: '10階建て商業ビルの基礎部分におけるダイヤモンドコア工事を実施。',
+                image: 'images/sample/work1.jpg',
+                date: '2024-01-20'
+            },
+            {
+                id: 2,
+                title: 'マンション構造補強工事',
+                category: 'anchor',
+                location: '神奈川県横浜市',
+                description: '築30年マンションの耐震補強におけるアンカー工事を実施。',
+                image: 'images/sample/work2.jpg',
+                date: '2024-01-18'
+            },
+            {
+                id: 3,
+                title: '橋梁点検業務',
+                category: 'inspection',
+                location: '埼玉県さいたま市',
+                description: '市内主要橋梁の定期点検および非破壊検査を実施。',
+                image: 'images/sample/work3.jpg',
+                date: '2024-01-15'
+            }
+        ];
+        localStorage.setItem('works', JSON.stringify(sampleWorks));
+    }
+}
 
 console.log('Corporate website scripts loaded successfully!');
