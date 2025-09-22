@@ -795,8 +795,12 @@ section::before {
     z-index: 0;
 }
 
-/* about.htmlページ内のすべての白い背景を透明化 */
-.about * {
+/* about.htmlページ内の特定要素のみ透明化 */
+.about .info-table *,
+.about .detail-section *,
+.about .about-text *,
+.about .company-philosophy *,
+.about .page-hero * {
     background: transparent !important;
 }
 
@@ -907,16 +911,13 @@ section::before {
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
 }
 
-/* greeting.htmlページ内の全要素の背景を透明化 */
-.greeting-main *,
-.greeting-content *,
+/* greeting.htmlページ内の特定要素のみ透明化 */
 .greeting-profile *,
 .greeting-message *,
 .message-section *,
 .greeting-text,
-.profile-details,
-.profile-details p,
-.policy-list,
+.profile-details *,
+.policy-list *,
 .policy-item {
     background: transparent !important;
 }
@@ -2402,8 +2403,9 @@ input[type="submit"], button[type="submit"] {
         linear-gradient(135deg, #eff6ff 0%, #dbeafe 30%, #bfdbfe 70%, #dbeafe 100%) !important;
 }
 
-/* 会社概要セクション内のすべての白い背景を透明化 */
-#about.about-summary * {
+/* 会社概要セクション内の特定要素のみ透明化 */
+#about.about-summary .about-mission *,
+#about.about-summary .feature-item * {
     background: transparent !important;
 }
 
