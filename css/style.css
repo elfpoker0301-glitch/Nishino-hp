@@ -2420,6 +2420,10 @@ input[type="submit"], button[type="submit"] {
     background: #059669;
 }
 
+.branch-tag.office {
+    background: #f59e0b;
+}
+
 .branch-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
