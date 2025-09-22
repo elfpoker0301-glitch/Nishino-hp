@@ -773,12 +773,12 @@ section::before {
     font-weight: 500;
 }
 
-/* 会社概要セクション - 強力な青い背景 */
+/* 会社概要セクション - 非常に強力な青い背景 */
 .about {
-    background: 
-        radial-gradient(ellipse at top left, rgba(59, 130, 246, 0.4) 0%, rgba(59, 130, 246, 0.15) 50%),
-        radial-gradient(ellipse at bottom right, rgba(147, 197, 253, 0.3) 0%, rgba(147, 197, 253, 0.1) 50%),
-        linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%) !important;
+    background: #bfdbfe !important;
+    background-image: 
+        radial-gradient(ellipse at top left, rgba(59, 130, 246, 0.6) 0%, rgba(59, 130, 246, 0.2) 50%),
+        radial-gradient(ellipse at bottom right, rgba(147, 197, 253, 0.4) 0%, rgba(147, 197, 253, 0.15) 50%) !important;
     position: relative;
     overflow: hidden;
     min-height: 100vh;
@@ -802,8 +802,10 @@ section::before {
 
 /* 重要な要素だけ半透明の背景を復活 */
 .about .info-table,
-.about .detail-section {
-    background: rgba(255, 255, 255, 0.7) !important;
+.about .detail-section,
+.about .about-text,
+.about .company-philosophy {
+    background: rgba(255, 255, 255, 0.6) !important;
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 1.5rem;
@@ -811,6 +813,7 @@ section::before {
     border: 1px solid rgba(59, 130, 246, 0.1);
     position: relative;
     z-index: 1;
+    margin-bottom: 2rem;
 }
 
 .about-content {
@@ -890,12 +893,25 @@ section::before {
 /* 代表挨拶ページスタイル */
 .greeting-main {
     padding: 80px 0;
-    background: #f8fafc;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+    position: relative;
+}
+
+.greeting-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
 }
 
 .greeting-content {
     max-width: 1000px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .greeting-profile {
@@ -903,10 +919,12 @@ section::before {
     grid-template-columns: 300px 1fr;
     gap: 3rem;
     margin-bottom: 4rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(10px);
     padding: 3rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .profile-image {
@@ -947,10 +965,12 @@ section::before {
 }
 
 .greeting-message {
-    background: white;
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(10px);
     padding: 3rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .message-section {
