@@ -775,7 +775,41 @@ section::before {
 
 /* 会社概要セクション */
 .about {
-    background: #f8fafc;
+    background: 
+        radial-gradient(ellipse at top left, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0.08) 50%),
+        radial-gradient(ellipse at bottom right, rgba(147, 197, 253, 0.2) 0%, rgba(147, 197, 253, 0.05) 50%),
+        linear-gradient(135deg, #eff6ff 0%, #dbeafe 30%, #bfdbfe 70%, #dbeafe 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233b82f6' fill-opacity='0.03'%3E%3Cpath d='M20 20.5V18H0v-2h20v2.5L18.5 20H20zm0 0V22H0v2h20v-2.5L18.5 22H20z'/%3E%3C/g%3E%3C/svg%3E") repeat;
+    z-index: 0;
+}
+
+/* about.htmlページ内のすべての白い背景を透明化 */
+.about * {
+    background: transparent !important;
+}
+
+/* 重要な要素だけ半透明の背景を復活 */
+.about .info-table,
+.about .detail-section {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    position: relative;
+    z-index: 1;
 }
 
 .about-content {
@@ -783,6 +817,8 @@ section::before {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .about-text h3 {
