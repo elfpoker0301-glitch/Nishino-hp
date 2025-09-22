@@ -445,3 +445,103 @@ function initializeSampleData() {
 }
 
 console.log('Corporate website scripts loaded successfully!');
+
+// モダンなスクロールアニメーション機能
+document.addEventListener('DOMContentLoaded', () => {
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                
+                // カウンターアニメーション
+                if (entry.target.classList.contains('hero-stat-number')) {
+                    animateCounter(entry.target);
+                }
+            }
+        });
+    }, observerOptions);
+
+    // 観察対象要素を追加
+    const animateElements = document.querySelectorAll('.section-header, .about-text, .service-card, .news-item, .hero-stat');
+    animateElements.forEach(el => {
+        el.classList.add('animate-element');
+        observer.observe(el);
+    });
+
+    // カウンターアニメーション関数
+    function animateCounter(element) {
+        const target = parseInt(element.textContent.replace(/\D/g, ''));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            element.textContent = Math.floor(current) + (element.textContent.includes('+') ? '+' : '') + (element.textContent.includes('%') ? '%' : '');
+        }, 16);
+    }
+
+    // スムーズスクロール
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                const headerOffset = 70;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // パララックス効果
+    let ticking = false;
+    function updateParallax() {
+        const scrolled = window.pageYOffset;
+        const heroParticles = document.querySelector('.hero-particles');
+        
+        if (heroParticles) {
+            const speed = scrolled * 0.5;
+            heroParticles.style.transform = `translateY(${speed}px)`;
+        }
+
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', requestTick);
+
+    // スクロールインジケーターのクリックイベント
+    const scrollIndicator = document.querySelector('.scroll-arrow');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', () => {
+            const nextSection = document.querySelector('#news, .news');
+            if (nextSection) {
+                nextSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+});
