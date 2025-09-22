@@ -907,6 +907,20 @@ section::before {
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
 }
 
+/* greeting.htmlページ内の全要素の背景を透明化 */
+.greeting-main *,
+.greeting-content *,
+.greeting-profile *,
+.greeting-message *,
+.message-section *,
+.greeting-text,
+.profile-details,
+.profile-details p,
+.policy-list,
+.policy-item {
+    background: transparent !important;
+}
+
 .greeting-content {
     max-width: 1000px;
     margin: 0 auto;
