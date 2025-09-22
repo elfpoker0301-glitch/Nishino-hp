@@ -773,14 +773,15 @@ section::before {
     font-weight: 500;
 }
 
-/* 会社概要セクション */
+/* 会社概要セクション - 強力な青い背景 */
 .about {
     background: 
-        radial-gradient(ellipse at top left, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0.08) 50%),
-        radial-gradient(ellipse at bottom right, rgba(147, 197, 253, 0.2) 0%, rgba(147, 197, 253, 0.05) 50%),
-        linear-gradient(135deg, #eff6ff 0%, #dbeafe 30%, #bfdbfe 70%, #dbeafe 100%);
+        radial-gradient(ellipse at top left, rgba(59, 130, 246, 0.4) 0%, rgba(59, 130, 246, 0.15) 50%),
+        radial-gradient(ellipse at bottom right, rgba(147, 197, 253, 0.3) 0%, rgba(147, 197, 253, 0.1) 50%),
+        linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%) !important;
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 .about::before {
