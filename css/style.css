@@ -2331,6 +2331,22 @@ input[type="submit"], button[type="submit"] {
         linear-gradient(135deg, #eff6ff 0%, #dbeafe 30%, #bfdbfe 70%, #dbeafe 100%) !important;
 }
 
+/* 会社概要セクション内のすべての白い背景を透明化 */
+#about.about-summary * {
+    background: transparent !important;
+}
+
+/* 重要な要素だけ半透明の背景を復活 */
+#about.about-summary .about-mission {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(10px);
+}
+
+#about.about-summary .feature-item {
+    background: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(8px);
+}
+
 .about-summary::before, .works-summary::before {
     content: '';
     position: absolute;
@@ -2416,14 +2432,16 @@ input[type="submit"], button[type="submit"] {
 }
 
 .feature-item {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
     padding: 1.5rem;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.1);
     display: flex;
     align-items: center;
     gap: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(59, 130, 246, 0.1);
 }
 
 .feature-item:hover {
