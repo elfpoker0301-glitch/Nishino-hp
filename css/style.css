@@ -2310,9 +2310,7 @@ input[type="submit"], button[type="submit"] {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 25%, #f1f5f9 50%, #e2e8f0 75%, #f8fafc 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 4s ease-in-out infinite;
+    background: #f8fafc;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2558,18 +2556,6 @@ input[type="submit"], button[type="submit"] {
     }
     50% {
         opacity: 0.8;
-    }
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
     }
 }
 
