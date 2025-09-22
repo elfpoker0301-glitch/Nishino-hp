@@ -3008,63 +3008,35 @@ input[type="submit"], button[type="submit"] {
 }
 
 .loading-text .letter::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.8), transparent);
-    animation: shineEffect 2s ease-in-out infinite;
+    display: none;
 }
 
 .loading-text .letter[data-letter="0"] { 
     animation-delay: 0.3s; 
 }
-.loading-text .letter[data-letter="0"]::before { 
-    animation-delay: 1.8s; 
-}
 
 .loading-text .letter[data-letter="1"] { 
     animation-delay: 0.5s; 
-}
-.loading-text .letter[data-letter="1"]::before { 
-    animation-delay: 2.0s; 
 }
 
 .loading-text .letter[data-letter="2"] { 
     animation-delay: 0.7s; 
 }
-.loading-text .letter[data-letter="2"]::before { 
-    animation-delay: 2.2s; 
-}
 
 .loading-text .letter[data-letter="3"] { 
     animation-delay: 0.9s; 
-}
-.loading-text .letter[data-letter="3"]::before { 
-    animation-delay: 2.4s; 
 }
 
 .loading-text .letter[data-letter="4"] { 
     animation-delay: 1.1s; 
 }
-.loading-text .letter[data-letter="4"]::before { 
-    animation-delay: 2.6s; 
-}
 
 .loading-text .letter[data-letter="5"] { 
     animation-delay: 1.3s; 
 }
-.loading-text .letter[data-letter="5"]::before { 
-    animation-delay: 2.8s; 
-}
 
 .loading-text .letter[data-letter="6"] { 
     animation-delay: 1.5s; 
-}
-.loading-text .letter[data-letter="6"]::before { 
-    animation-delay: 3.0s; 
 }
 
 .loading-spinner {
@@ -3144,23 +3116,6 @@ input[type="submit"], button[type="submit"] {
     100% {
         opacity: 1;
         transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes shineEffect {
-    0% {
-        left: -100%;
-        opacity: 0;
-    }
-    20% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        left: 100%;
-        opacity: 0;
     }
 }
 
