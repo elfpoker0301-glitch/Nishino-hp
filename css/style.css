@@ -773,15 +773,11 @@ section::before {
     font-weight: 500;
 }
 
-/* 会社概要セクション - 非常に強力な青い背景 */
+/* 会社概要セクション - 白背景に戻す */
 .about {
-    background: #bfdbfe !important;
-    background-image: 
-        radial-gradient(ellipse at top left, rgba(59, 130, 246, 0.6) 0%, rgba(59, 130, 246, 0.2) 50%),
-        radial-gradient(ellipse at bottom right, rgba(147, 197, 253, 0.4) 0%, rgba(147, 197, 253, 0.15) 50%) !important;
+    background: #f8fafc;
     position: relative;
-    overflow: hidden;
-    min-height: 100vh;
+    padding: 80px 0;
 }
 
 .about::before {
@@ -795,7 +791,7 @@ section::before {
     z-index: 0;
 }
 
-/* about.htmlページ内の特定要素のみ透明化 */
+/* about.html透明化ルールをコメントアウト - 白背景に戻す
 .about .info-table *,
 .about .detail-section *,
 .about .about-text *,
@@ -803,18 +799,18 @@ section::before {
 .about .page-hero * {
     background: transparent !important;
 }
+*/
 
-/* 重要な要素だけ半透明の背景を復活 */
+/* 重要な要素を通常の白背景に戻す */
 .about .info-table,
 .about .detail-section,
 .about .about-text,
 .about .company-philosophy {
-    background: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(10px);
+    background: white;
     border-radius: 15px;
     padding: 1.5rem;
-    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(221, 221, 221, 0.4);
     position: relative;
     z-index: 1;
     margin-bottom: 2rem;
@@ -897,10 +893,11 @@ section::before {
 /* 代表挨拶ページスタイル */
 .greeting-main {
     padding: 80px 0;
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+    background: #f8fafc;
     position: relative;
 }
 
+/* .greeting-main::beforeは不要なのでコメントアウト
 .greeting-main::before {
     content: '';
     position: absolute;
@@ -910,8 +907,9 @@ section::before {
     bottom: 0;
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
 }
+*/
 
-/* greeting.htmlページ内の特定要素のみ透明化 */
+/* greeting.html透明化ルールをコメントアウト - 白背景に戻す
 .greeting-profile *,
 .greeting-message *,
 .message-section *,
@@ -921,6 +919,7 @@ section::before {
 .policy-item {
     background: transparent !important;
 }
+*/
 
 .greeting-content {
     max-width: 1000px;
@@ -934,12 +933,11 @@ section::before {
     grid-template-columns: 300px 1fr;
     gap: 3rem;
     margin-bottom: 4rem;
-    background: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(10px);
+    background: white;
     padding: 3rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(221, 221, 221, 0.4);
 }
 
 .profile-image {
@@ -980,12 +978,11 @@ section::before {
 }
 
 .greeting-message {
-    background: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(10px);
+    background: white;
     padding: 3rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(221, 221, 221, 0.4);
 }
 
 .message-section {
@@ -2395,29 +2392,25 @@ input[type="submit"], button[type="submit"] {
     overflow: hidden;
 }
 
-/* 会社概要セクション専用の強い青い背景 */
+/* 会社概要セクション - 通常のグレー背景に戻す */
 #about.about-summary {
-    background: 
-        radial-gradient(ellipse at top left, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0.08) 50%),
-        radial-gradient(ellipse at bottom right, rgba(147, 197, 253, 0.2) 0%, rgba(147, 197, 253, 0.05) 50%),
-        linear-gradient(135deg, #eff6ff 0%, #dbeafe 30%, #bfdbfe 70%, #dbeafe 100%) !important;
+    background: #f8fafc;
 }
 
-/* 会社概要セクション内の特定要素のみ透明化 */
+/* ホームページ会社概要の透明化ルールをコメントアウト
 #about.about-summary .about-mission *,
 #about.about-summary .feature-item * {
     background: transparent !important;
 }
+*/
 
-/* 重要な要素だけ半透明の背景を復活 */
+/* 重要な要素を通常の背景に戻す */
 #about.about-summary .about-mission {
-    background: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 #about.about-summary .feature-item {
-    background: rgba(255, 255, 255, 0.5) !important;
-    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .about-summary::before, .works-summary::before {
