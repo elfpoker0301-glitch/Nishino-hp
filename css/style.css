@@ -260,6 +260,29 @@ body {
     transition: all 0.3s ease;
     border: 2px solid transparent;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .btn {
+        padding: 14px 24px;
+        font-size: 1rem;
+        border-radius: 8px;
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 0.5rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
 }
 
 .btn-primary {
@@ -1274,12 +1297,20 @@ input[type="submit"], button[type="submit"] {
 
 .recruit-cta-simple {
     margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .recruit-cta-simple .btn {
-    margin: 0.5rem;
     padding: 0.8rem 2rem;
-    min-width: 200px;
+    min-width: 180px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -1289,10 +1320,37 @@ input[type="submit"], button[type="submit"] {
         gap: 1rem;
     }
     
+    .recruit-cta-simple {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        padding: 0 1rem;
+    }
+    
     .recruit-cta-simple .btn {
-        display: block;
-        margin: 0.5rem auto;
-        width: 250px;
+        width: 100%;
+        max-width: 280px;
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+        min-width: unset;
+        margin: 0;
+    }
+    
+    .recruit-cta-simple .btn-secondary {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .recruit-cta-simple {
+        padding: 0 0.5rem;
+    }
+    
+    .recruit-cta-simple .btn {
+        max-width: 100%;
+        padding: 0.9rem 1rem;
+        font-size: 1rem;
     }
 }
 
