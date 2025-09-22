@@ -3025,11 +3025,13 @@ input[type="submit"], button[type="submit"] {
     transform: translateY(50px) scale(0.5);
     animation: letterAppearShine 0.8s ease-out forwards;
     position: relative;
-    background: linear-gradient(90deg, #1e293b 25%, #3b82f6 50%, #1e293b 75%);
-    background-size: 200% 100%;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 25%, #60a5fa 50%, #2563eb 75%, #1d4ed8 100%);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradientShift 4s ease-in-out infinite, letterAppearShine 0.8s ease-out forwards;
+    filter: drop-shadow(0 0 1px rgba(30, 64, 175, 0.3));
 }
 
 .loading-text .letter::before {
