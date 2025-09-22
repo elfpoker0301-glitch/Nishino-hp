@@ -723,14 +723,14 @@ section {
 
 section:nth-child(even) {
     background: 
-        radial-gradient(ellipse at top, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
-        linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(241, 245, 249, 0.9) 100%);
+        radial-gradient(ellipse at top, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.95) 100%);
 }
 
 section:nth-child(odd) {
     background: 
-        radial-gradient(ellipse at bottom, rgba(147, 197, 253, 0.02) 0%, transparent 50%),
-        linear-gradient(-45deg, rgba(255, 255, 255, 0.6) 0%, rgba(248, 250, 252, 0.8) 100%);
+        radial-gradient(ellipse at bottom, rgba(147, 197, 253, 0.03) 0%, transparent 50%),
+        linear-gradient(-45deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
 }
 
 /* セクション装飾要素 */
@@ -758,14 +758,17 @@ section::before {
 .section-header h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #1f2937;
+    color: #111827;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .section-header p {
     font-size: 1.1rem;
-    color: #6b7280;
+    color: #374151;
     max-width: 600px;
     margin: 0 auto;
+    font-weight: 500;
 }
 
 /* 会社概要セクション */
@@ -2354,14 +2357,16 @@ input[type="submit"], button[type="submit"] {
 .about-mission h3 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #1f2937;
+    color: #111827;
     font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .about-mission p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #4b5563;
+    color: #374151;
+    font-weight: 500;
 }
 
 .highlight-text {
