@@ -2,6 +2,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loadingScreen = document.getElementById('loading-screen');
     const mainContent = document.getElementById('main-content');
+    
+    // 初回アクセスかどうかをチェック
+    const hasVisited = sessionStorage.getItem('hasVisitedNishibo');
+    
+    if (hasVisited) {
+        // 既に訪問済みの場合、ローディングをスキップ
+        console.log('既に訪問済み - ローディングアニメーションをスキップ');
+        skipLoading();
+        return;
+    }
+    
+    // 初回アクセスの場合、ローディングアニメーションを実行
+    console.log('初回アクセス - ローディングアニメーションを表示');
+    sessionStorage.setItem('hasVisitedNishibo', 'true');
+    
     let assetsLoaded = false;
     let minimumTimeElapsed = false;
 
@@ -21,6 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkAndHideLoading() {
         if (assetsLoaded && minimumTimeElapsed) {
             hideLoading();
+        }
+    }
+    
+    // ローディングをスキップする関数
+    function skipLoading() {
+        if (loadingScreen) {
+            loadingScreen.style.display = 'none';
+        }
+        if (mainContent) {
+            mainContent.classList.add('show');
         }
     }
 
