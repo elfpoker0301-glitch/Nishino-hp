@@ -804,6 +804,22 @@ section::before {
     z-index: 0;
 }
 
+/* about.htmlのpage-heroセクションは独立して表示 */
+.page-hero {
+    position: relative;
+    z-index: 10;
+}
+
+.page-hero .hero-container,
+.page-hero .hero-content,
+.page-hero .hero-title,
+.page-hero .hero-description {
+    position: relative;
+    z-index: 11;
+    background: none !important;
+    color: white !important;
+}
+
 /* about.html透明化ルールをコメントアウト - 白背景に戻す
 .about .info-table *,
 .about .detail-section *,
