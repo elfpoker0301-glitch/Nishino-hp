@@ -2,15 +2,12 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="wi    <link rel="stylesheet" href="css/style.css?v=20250924-2">th=device-width, initial-scale=1.0">                <div class="nav-logo">
-                    <img src="images/nishibo-icon.png" alt="株式会社ニシボ ロゴ">
-                    <a href="index.html">NISHIBO</a>
-                </div> <title>株式会社ニシボ - 福岡のダイヤモンドコア工事・ボーリング工事専門会社</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社ニシボ - 福岡のダイヤモンドコア工事・ボーリング工事専門会社</title>
     <meta name="description" content="福岡県福岡市南区横手にある株式会社ニシボ。昭和61年創業、30数年の実績でダイヤモンドコア工事、各種アンカー工事、非破壊検査を提供。安全・信頼・迅速対応で建設工事をサポートします。">
     <meta name="keywords" content="ニシボ,ダイヤモンドコア工事,ボーリング工事,アンカー工事,非破壊検査,福岡,建設工事,コア穿孔">
     <meta name="author" content="株式会社ニシボ">
     <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/nishibo-icon.png">
@@ -65,35 +62,48 @@
         "addressCountry": "JP"
       },
       "foundingDate": "1986",
-      "description": "ダイヤモンドコア工事、アンカー工事、非破壊検査を専門とする建設会社",
-      "serviceArea": {
-        "@type": "State",
-        "name": "福岡県"
-      },
-      "makesOffer": [
+      "numberOfEmployees": "29",
+      "description": "ダイヤモンドコア工事、アンカー工事、非破壊検査を専門とする建設会社。昭和61年創業、38年の実績で安全・信頼・迅速対応をモットーに建設工事をサポート。",
+      "serviceArea": [
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "ダイヤモンドコア工事",
-            "description": "コンクリート構造物への高精度穿孔工事"
-          }
+          "@type": "State",
+          "name": "福岡県"
         },
         {
-          "@type": "Offer", 
-          "itemOffered": {
-            "@type": "Service",
-            "name": "アンカー工事",
-            "description": "各種アンカーボルトによる構造物の固定・補強工事"
-          }
+          "@type": "State", 
+          "name": "九州地方"
+        }
+      ],
+      "services": [
+        {
+          "@type": "Service",
+          "name": "ダイヤモンドコア工事",
+          "description": "φ25mm～φ600mmまで対応可能な高精度コンクリート穿孔工事"
         },
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service", 
-            "name": "非破壊検査",
-            "description": "構造物の安全性確認・診断業務"
-          }
+          "@type": "Service",
+          "name": "各種アンカー工事",
+          "description": "ケミカルアンカー、後施工アンカーによる構造物の固定・補強工事"
+        },
+        {
+          "@type": "Service",
+          "name": "非破壊検査・X線調査",
+          "description": "RCレーダー、X線透過検査による構造物内部の安全性確認"
+        },
+        {
+          "@type": "Service",
+          "name": "ウォールソー・ワイヤーソー工事",
+          "description": "大型構造物の精密切断・解体工事"
+        },
+        {
+          "@type": "Service",
+          "name": "バースター工事",
+          "description": "静的破砕による無騒音・無振動解体工事"
+        },
+        {
+          "@type": "Service",
+          "name": "斫り・解体工事",
+          "description": "コンクリート斫りから解体まで建設工事全般に対応"
         }
       ]
     }
@@ -102,7 +112,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=20250923-5">
+    <link rel="stylesheet" href="css/style.css?v=20250926-18">
 </head>
 <body>
     <!-- ローディング画面 -->
@@ -144,11 +154,11 @@
             <div class="nav-container">
                 <div class="nav-logo">
                     <img src="images/nishibo-icon.png" alt="株式会社ニシボ ロゴ">
-                    <a href="#home">NISHIBO</a>
+                    <a href="index.html">NISHIBO</a>
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link">ホーム</a>
+                        <a href="index.html" class="nav-link active">ホーム</a>
                     </li>
                     <li class="nav-item">
                         <a href="about.html" class="nav-link">会社概要</a>
@@ -166,10 +176,13 @@
                         <a href="branches.html" class="nav-link">支店情報</a>
                     </li>
                     <li class="nav-item">
+                        <a href="news.html" class="nav-link">お知らせ</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="recruit.html" class="nav-link">採用情報</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link">お問い合わせ</a>
+                        <a href="contact.html" class="nav-link">お問い合わせ</a>
                     </li>
                 </ul>
                 <div class="nav-toggle" id="mobile-menu">
@@ -198,21 +211,21 @@
                     お客様のニーズにお応えし続けています。
                 </p>
                 <div class="hero-stats">
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">30+</div>
+                    <div class="hero-stat stat-experience">
+                        <div class="hero-stat-number stat-number">38</div>
                         <div class="hero-stat-label">年の実績</div>
                     </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">1000+</div>
+                    <div class="hero-stat stat-projects">
+                        <div class="hero-stat-number stat-number">1000+</div>
                         <div class="hero-stat-label">施工実績</div>
                     </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">100%</div>
+                    <div class="hero-stat stat-satisfaction">
+                        <div class="hero-stat-number stat-number">100%</div>
                         <div class="hero-stat-label">安全施工</div>
                     </div>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#about" class="btn btn-primary btn-glow">
+                    <a href="about.html" class="btn btn-primary btn-glow">
                         <i class="fas fa-building"></i>
                         会社概要を見る
                     </a>
@@ -234,11 +247,6 @@
                 </div>
             </div>
         </div>
-        <div class="hero-scroll-indicator">
-            <div class="scroll-arrow">
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </div>
     </section>
 
     <!-- お知らせセクション -->
@@ -250,130 +258,17 @@
             </div>
             <div class="news-container">
                 <div class="news-list" id="news-list">
-                    <!-- お知らせはJavaScriptで動的に読み込まれます -->
+                    <!-- 管理画面から動的に読み込まれるお知らせ -->
                 </div>
                 <div class="news-more">
-                    <a href="news.html" class="btn btn-outline">お知らせ一覧を見る</a>
+                    <a href="news.html" class="btn btn-primary">お知らせ一覧を見る</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 会社概要セクション -->
-    <section id="about" class="about-summary">
-        <div class="container">
-            <div class="section-header animate-element">
-                <h2>会社概要</h2>
-                <p>昭和61年創業、ボーリング工事の老舗として福岡で信頼される企業</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text animate-element">
-                    <div class="about-mission">
-                        <div class="mission-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <h3>私たちの使命</h3>
-                        <p>
-                            昭和61年創業以来、<span class="highlight-text">ボーリング工事の老舗</span>として30数年の実績と経験を積み重ねてまいりました。
-                            業界内でも良く知られた優良企業として、<span class="highlight-text">安全・信頼・迅速対応・技術力・スピーディ施工</span>をモットーに、
-                            お客様のニーズにお応えし続けています。
-                        </p>
-                    </div>
-                    
-                    <div class="company-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>安全第一の施工</h4>
-                                <p>徹底した安全管理体制</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>確かな技術力</h4>
-                                <p>30年以上の実績と経験</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>スピード対応</h4>
-                                <p>お客様のニーズに迅速対応</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="stats-modern">
-                        <div class="stat-modern animate-element">
-                            <div class="stat-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </div>
-                            <div class="stat-content">
-                                <span class="stat-number-modern hero-stat-number">38</span>
-                                <span class="stat-label-modern">年の歴史</span>
-                            </div>
-                        </div>
-                        <div class="stat-modern animate-element">
-                            <div class="stat-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="stat-content">
-                                <span class="stat-number-modern hero-stat-number">29</span>
-                                <span class="stat-label-modern">従業員数</span>
-                            </div>
-                        </div>
-                        <div class="stat-modern animate-element">
-                            <div class="stat-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="stat-content">
-                                <span class="stat-number-modern hero-stat-number">100</span>
-                                <span class="stat-label-modern">安全施工率</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="about-summary-cta">
-                        <a href="about.html" class="btn btn-primary btn-glow">
-                            <i class="fas fa-building"></i>
-                            会社概要詳細へ
-                        </a>
-                    </div>
-                </div>
-                <div class="about-image animate-element">
-                    <div class="about-image-container">
-                        <img src="images/sample/office.jpg" alt="ニシボ本社・作業現場" class="about-main-image">
-                        <div class="about-overlay">
-                            <div class="about-badge">
-                                <div class="badge-icon">
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="badge-content">
-                                    <div class="badge-title">信頼の実績</div>
-                                    <div class="badge-subtitle">Since 1986</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-image-grid">
-                        <div class="grid-item">
-                            <img src="images/sample/work1.jpg" alt="施工実績1">
-                        </div>
-                        <div class="grid-item">
-                            <img src="images/sample/work2.jpg" alt="施工実績2">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- サービスセクション -->
     <section id="services" class="services">
@@ -382,91 +277,25 @@
                 <h2>事業案内</h2>
                 <p>当社が手がける専門工事の詳細をご紹介します</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
+            <div class="services-grid services-grid-compact">
+                <!-- 管理画面から動的に読み込まれる事業案内 -->
+                <!-- 初期表示用: JavaScript無効時のフォールバック -->
+                <div class="service-card service-card-compact fallback-content">
                     <div class="service-icon">💎</div>
-                    <h3>ダイヤモンドコア工事</h3>
-                    <p>ダイヤモンドビットを使用した精密な穴あけ工事。コンクリート構造物への正確な加工を行います。</p>
-                    <div class="service-detail">
-                        <h4>対応範囲</h4>
-                        <ul>
-                            <li>φ25mm～φ600mmまで対応</li>
-                            <li>壁厚1m以上の厚壁対応可能</li>
-                            <li>水平・垂直・斜め穴あけ</li>
-                            <li>高精度位置決め施工</li>
-                        </ul>
-                    </div>
+                    <h3 class="service-title">ダイヤモンドコア工事</h3>
+                    <p class="service-description">精密な穴あけ工事でφ25mm～φ600mmまで対応</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card service-card-compact fallback-content">
                     <div class="service-icon">⚓</div>
-                    <h3>各種アンカー工事</h3>
-                    <p>ケミカルアンカーをはじめとする各種アンカー工事。確実な固定・補強をご提供します。</p>
-                    <div class="service-detail">
-                        <h4>施工技術</h4>
-                        <ul>
-                            <li>ケミカルアンカー工法</li>
-                            <li>後施工アンカー各種</li>
-                            <li>耐震補強アンカー</li>
-                            <li>高強度固定技術</li>
-                        </ul>
-                    </div>
+                    <h3 class="service-title">各種アンカー工事</h3>
+                    <p class="service-description">ケミカルアンカー等による確実な固定・補強工事</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h3>非破壊検査・X線調査</h3>
-                    <p>RCレーダー、放射線（X線）を用いた非破壊検査で、構造物の内部状況を正確に調査します。</p>
-                    <div class="service-detail">
-                        <h4>調査項目</h4>
-                        <ul>
-                            <li>RCレーダー探査</li>
-                            <li>X線透過検査</li>
-                            <li>鉄筋位置・径の確認</li>
-                            <li>空洞・欠陥部の発見</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🛠️</div>
-                    <h3>ウォールソー・ワイヤーソー工事</h3>
-                    <p>コンクリート切断工事。壁面や大型構造物の切断・解体を安全かつ正確に実施します。</p>
-                    <div class="service-detail">
-                        <h4>切断能力</h4>
-                        <ul>
-                            <li>壁厚80cm以上対応可能</li>
-                            <li>大型開口部施工</li>
-                            <li>精密切断技術</li>
-                            <li>騒音・粉塵対策完備</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔨</div>
-                    <h3>バースター工事</h3>
-                    <p>静的破砕工事による騒音・振動を抑えた解体工事。周辺環境に配慮した施工を行います。</p>
-                    <div class="service-detail">
-                        <h4>特徴</h4>
-                        <ul>
-                            <li>無騒音・無振動施工</li>
-                            <li>狭所での解体作業</li>
-                            <li>構造物への影響最小</li>
-                            <li>粉塵飛散防止対策</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏗️</div>
-                    <h3>斫り・解体工事</h3>
-                    <p>コンクリート斫り工事から解体工事まで。建設工事全般に対応いたします。</p>
-                    <div class="service-detail">
-                        <h4>対応工事</h4>
-                        <ul>
-                            <li>コンクリート斫り工事</li>
-                            <li>部分解体・改修工事</li>
-                            <li>内装解体工事</li>
-                            <li>産業廃棄物適正処理</li>
-                        </ul>
-                    </div>
-                </div>
+            </div>
+            <div class="services-cta">
+                <a href="services.html" class="btn btn-primary btn-glow">
+                    <i class="fas fa-tools"></i>
+                    事業案内詳細を見る
+                </a>
             </div>
         </div>
     </section>
@@ -478,40 +307,53 @@
                 <h2>工事実績</h2>
                 <p>30数年の経験で培った確かな技術による代表的な工事実績</p>
             </div>
-            <div class="works-grid">
-                <div class="work-card" data-category="diamond">
-                    <div class="work-image">
+            <div class="works-slider-container">
+                <div class="works-slider" id="worksSlider">
+                    <!-- 画像を2セット用意して無限ループを実現 -->
+                    <div class="work-slide">
                         <img src="images/sample/work1.jpg" alt="ダイヤモンドコア工事実績">
                     </div>
-                    <div class="work-info">
-                        <h4>大型商業施設 コア工事</h4>
-                        <p class="work-category">ダイヤモンドコア工事</p>
-                        <p class="work-description">商業施設の設備配管用穴あけ工事を精密に実施</p>
-                    </div>
-                </div>
-                <div class="work-card" data-category="anchor">
-                    <div class="work-image">
+                    <div class="work-slide">
                         <img src="images/sample/work2.jpg" alt="アンカー工事実績">
                     </div>
-                    <div class="work-info">
-                        <h4>マンション構造補強工事</h4>
-                        <p class="work-category">ケミカルアンカー工事</p>
-                        <p class="work-description">既存建物の耐震補強用アンカー設置工事</p>
-                    </div>
-                </div>
-                <div class="work-card" data-category="inspection">
-                    <div class="work-image">
+                    <div class="work-slide">
                         <img src="images/sample/work3.jpg" alt="X線調査実績">
                     </div>
-                    <div class="work-info">
-                        <h4>橋梁構造 X線調査</h4>
-                        <p class="work-category">非破壊検査</p>
-                        <p class="work-description">コンクリート内部の鉄筋配置調査</p>
+                    <div class="work-slide">
+                        <img src="images/sample/office.jpg" alt="施工現場">
+                    </div>
+                    <div class="work-slide">
+                        <img src="images/sample/team.jpg" alt="作業チーム">
+                    </div>
+                    <div class="work-slide">
+                        <img src="images/sample/hero-bg.jpg" alt="施工実績">
+                    </div>
+                    <!-- 同じ画像セットをもう一度（無限ループ用） -->
+                    <div class="work-slide">
+                        <img src="images/sample/work1.jpg" alt="ダイヤモンドコア工事実績">
+                    </div>
+                    <div class="work-slide">
+                        <img src="images/sample/work2.jpg" alt="アンカー工事実績">
+                    </div>
+                    <div class="work-slide">
+                        <img src="images/sample/work3.jpg" alt="X線調査実績">
+                    </div>
+                    <div class="work-slide">
+                        <img src="images/sample/office.jpg" alt="施工現場">
+                    </div>
+                    <div class="work-slide">
+                        <img src="images/sample/team.jpg" alt="作業チーム">
+                    </div>
+                    <div class="work-slide">
+                        <img src="images/sample/hero-bg.jpg" alt="施工実績">
                     </div>
                 </div>
             </div>
             <div class="works-summary-cta">
-                <a href="works.html" class="btn btn-primary">すべての工事実績を見る</a>
+                <a href="works.html" class="btn btn-primary btn-glow">
+                    <i class="fas fa-eye"></i>
+                    施工実績詳細を見る
+                </a>
             </div>
         </div>
     </section>
@@ -533,7 +375,7 @@
                             <span>安定した経営基盤</span>
                         </div>
                         <div class="highlight-item">
-                            <span class="highlight-icon">�</span>
+                            <span class="highlight-icon">🔧</span>
                             <span>技術力向上サポート</span>
                         </div>
                         <div class="highlight-item">
@@ -550,53 +392,16 @@
         </div>
     </section>
 
-    <!-- お問い合わせセクション -->
-    <section id="contact" class="contact">
+    <!-- お問い合わせCTAセクション -->
+    <section class="contact-cta">
         <div class="container">
             <div class="section-header">
                 <h2>お問い合わせ</h2>
                 <p>お気軽にご相談ください。無料相談も承っております。</p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h4>📍 本社</h4>
-                        <p>〒811-1311<br>福岡県福岡市南区横手3丁目39-19</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>📞 電話番号</h4>
-                        <p>092-592-6533（代表）</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>📠 FAX番号</h4>
-                        <p>092-592-6534</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>⏰ 営業時間</h4>
-                        <p>平日 8:00-17:00</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">お名前 <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">メールアドレス <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">会社名</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">お問い合わせ内容 <span class="required">*</span></label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">送信する</button>
-                    </form>
-                </div>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">お問い合わせフォーム</a>
+                <a href="tel:092-592-6533" class="btn btn-secondary">📞 092-592-6533</a>
             </div>
         </div>
     </section>
@@ -606,38 +411,44 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>株式会社ニシボ</h4>
-                    <p>安全・信頼・迅速対応で確かな技術をお届け</p>
+                    <h4>About Nishibo</h4>
+                    <p><strong><span class="company-name footer-company-name">株式会社ニシボ</span></strong></p>
+                    <p>昭和61年創業。福岡を拠点に専門工事技術で社会インフラを支える建設会社です。</p>
+                    <p><em>安全・信頼・迅速対応で確かな技術をお届け</em></p>
                 </div>
                 <div class="footer-section">
-                    <h4>事業内容</h4>
-                    <ul>
-                        <li><a href="#services">ダイヤモンドコア工事</a></li>
-                        <li><a href="#services">各種アンカー工事</a></li>
-                        <li><a href="#services">非破壊検査・X線調査</a></li>
-                        <li><a href="#services">ウォールソー・ワイヤーソー工事</a></li>
+                    <h4>Services</h4>
+                    <ul id="footer-services-list">
+                        <!-- 管理画面から動的に読み込まれるサービス一覧 -->
+                        <li><a href="services.html">ダイヤモンドコア工事</a></li>
+                        <li><a href="services.html">各種アンカー工事</a></li>
+                        <li><a href="services.html">非破壊検査・X線調査</a></li>
+                        <li><a href="services.html">ウォールソー・ワイヤーソー工事</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>会社情報</h4>
+                    <h4>Navigation</h4>
                     <ul>
-                        <li><a href="#about">会社概要</a></li>
-                        <li><a href="#works">工事実績</a></li>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="greeting.html">代表挨拶</a></li>
+                        <li><a href="works.html">工事実績</a></li>
+                        <li><a href="branches.html">支店情報</a></li>
+                        <li><a href="news.html">お知らせ</a></li>
                         <li><a href="recruit.html">採用情報</a></li>
-                        <li><a href="#contact">お問い合わせ</a></li>
-                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>お問い合わせ</h4>
+                    <h4>Contact</h4>
                     <p><strong>本社</strong></p>
-                    <p>📞 092-592-6533（代表）</p>
-                    <p>📠 092-592-6534</p>
-                    <p>📍 〒811-1311<br>福岡県福岡市南区横手3丁目39-19</p>
+                    <p>� 〒811-1311<br>福岡県福岡市南区横手3丁目39-19</p>
+                    <p>📞 <span class="contact-phone footer-phone">092-592-6533</span>（代表）<br>📠 <span class="contact-fax footer-fax">092-592-6534</span></p>
+                    <p><strong>営業時間</strong><br>平日 8:00-17:00</p>
                 </div>
             </div>
-                        <div class="footer-bottom">
-                <p>&copy; 2024 Nishibo Corporation. All rights reserved. | <a href="privacy.html">プライバシーポリシー</a></p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nishibo Corporation. All rights reserved. | <a href="privacy.html">プライバシーポリシー</a></p>
             </div>
         </div>
     </footer>
