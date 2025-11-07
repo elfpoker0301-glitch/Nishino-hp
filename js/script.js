@@ -5,8 +5,11 @@ console.log('メインスクリプト読み込み開始');
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM読み込み完了');
     
-    // ローディング中はbodyのスクロールを防止
-    document.body.classList.add('loading');
+    // ローディング画面がある場合のみloadingクラスを追加
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        document.body.classList.add('loading');
+    }
     
     // テスト用お知らせデータの初期化
     initTestNewsData();
@@ -126,6 +129,7 @@ function startYearCounter() {
         // 表示更新（創業○○年の形式）
         yearDisplay.textContent = Math.floor(animatedYears);
         if (progressFill) {
+            const progress = (animatedYears / yearsInBusiness) * 100;
             progressFill.style.width = Math.min(progress, 100) + '%';
         }
     }, 50);
