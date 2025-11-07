@@ -1425,7 +1425,7 @@ body::after {
 
 @media (max-width: 768px) {
     .hero-modern {
-        aspect-ratio: 4 / 3; /* タブレットでは少し縦長に */
+        aspect-ratio: 16 / 9; /* タブレットも16:9に統一 */
         min-height: 350px;
         margin-top: 70px;
         background-attachment: scroll;
@@ -1442,7 +1442,7 @@ body::after {
 
 @media (max-width: 480px) {
     .hero-modern {
-        aspect-ratio: 3 / 4; /* スマホでは縦長に */
+        aspect-ratio: 16 / 9; /* スマホも16:9に統一 */
         min-height: 300px;
         max-height: 80vh; /* スマホでは画面の80%まで */
         margin-top: 70px;
