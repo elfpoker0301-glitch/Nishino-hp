@@ -4199,6 +4199,7 @@ input[type="submit"], button[type="submit"] {
     .news-more {
         margin-top: 2rem;
         padding: 1rem;
+        text-align: center;
     }
     
     .news-more .btn-primary {
@@ -4207,6 +4208,7 @@ input[type="submit"], button[type="submit"] {
         font-size: 0.9rem;
         text-align: center;
         display: block;
+        margin: 0 auto;
     }
     
     .news-item-header {
