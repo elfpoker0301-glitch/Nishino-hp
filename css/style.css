@@ -7542,7 +7542,67 @@ body:not(.loading) .main-content {
     }
 }
 
-/* ヒーローキャッチコピー */
+/* ヒーローキャッチコピー - ホームページ用 */
+.hero-modern .hero-catchcopy {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    z-index: 15;
+    text-align: left;
+    display: block;
+}
+
+.hero-modern .hero-company-name {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    display: block;
+    letter-spacing: 0.15em;
+    font-family: 'Arial Black', 'Arial', sans-serif;
+    /* 背景クリッピングで背景が透けて見える */
+    background: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* より透明なガラスの縁取り */
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 0.25);
+    /* 繊細なガラスの光沢 */
+    filter: 
+        drop-shadow(0 1px 1px rgba(255, 255, 255, 0.4))
+        drop-shadow(0 -1px 1px rgba(255, 255, 255, 0.2))
+        drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3))
+        drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.2))
+        drop-shadow(0 0 4px rgba(255, 255, 255, 0.15));
+    /* フォントレンダリングを最適化 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.hero-modern .catchcopy-text {
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    display: block;
+    letter-spacing: 0.1em;
+    /* 視認性の高いゴシック体を優先 */
+    font-family: 'Noto Sans JP', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', sans-serif;
+    /* シャープで読みやすい影 */
+    text-shadow: 
+        3px 3px 6px rgba(0, 0, 0, 0.8),
+        5px 5px 15px rgba(0, 0, 0, 0.6);
+    /* フォントレンダリングを最適化 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    /* 太字を強調 */
+    font-weight: 900;
+}
+
+/* ヒーローキャッチコピー - ページヒーロー用 */
 .page-hero .hero-catchcopy {
     position: absolute !important;
     top: 20% !important;
@@ -7566,7 +7626,19 @@ body:not(.loading) .main-content {
     display: block !important;
 }
 
-/* ヒーロー著作権表示 */
+/* ヒーロー著作権表示 - ホームページ用 */
+.hero-modern .hero-copyright {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 15;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    display: block;
+}
+
+/* ヒーロー著作権表示 - ページヒーロー用 */
 .page-hero .hero-copyright {
     position: absolute !important;
     bottom: 10px !important;
@@ -7581,49 +7653,66 @@ body:not(.loading) .main-content {
 
 /* レスポンシブ対応 */
 @media (max-width: 1024px) {
-    .hero-catchcopy {
+    .hero-modern .hero-catchcopy {
         top: 8%;
         left: 3%;
     }
     
-    .catchcopy-text {
-        font-size: 3.5rem !important;
+    .hero-modern .hero-company-name {
+        font-size: 2.8rem;
+    }
+    
+    .hero-modern .catchcopy-text {
+        font-size: 3.5rem;
     }
 }
 
 @media (max-width: 768px) {
-    .hero-catchcopy {
+    .hero-modern .hero-catchcopy {
         top: 6%;
         left: 2%;
     }
     
-    .catchcopy-text {
-        font-size: 2.5rem !important;
-        margin-bottom: 1rem !important;
+    .hero-modern .hero-company-name {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
     }
     
-    .hero-copyright {
+    .hero-modern .catchcopy-text {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.05em;
+    }
+    
+    .hero-modern .hero-copyright {
         font-size: 0.6rem;
-        bottom: 8px;
-        right: 8px;
+        bottom: 3px;
+        right: 3px;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-catchcopy {
+    .hero-modern .hero-catchcopy {
         top: 5%;
         left: 2%;
     }
     
-    .catchcopy-text {
-        font-size: 1.8rem !important;
-        margin-bottom: 0.8rem !important;
+    .hero-modern .hero-company-name {
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.1em;
     }
     
-    .hero-copyright {
+    .hero-modern .catchcopy-text {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+        letter-spacing: 0.03em;
+    }
+    
+    .hero-modern .hero-copyright {
         font-size: 0.5rem;
-        bottom: 5px;
-        right: 5px;
+        bottom: 2px;
+        right: 2px;
     }
 }
 
