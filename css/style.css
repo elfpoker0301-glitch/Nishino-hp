@@ -517,9 +517,12 @@ body::after {
 
 .hero-modern {
     position: relative;
-    min-height: calc(100vh - 70px);
     margin-top: 70px;
     width: 100%;
+    /* 横幅基準で高さを自動調整 - 16:9のアスペクト比 */
+    aspect-ratio: 16 / 9;
+    min-height: 400px; /* 最小高さを確保 */
+    max-height: calc(100vh - 70px); /* 画面をはみ出さないように制限 */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -1411,6 +1414,7 @@ body::after {
     .hero-modern {
         background-size: cover;
         background-position: center center;
+        aspect-ratio: 16 / 9;
     }
     
     .hero-bg-image {
@@ -1421,7 +1425,8 @@ body::after {
 
 @media (max-width: 768px) {
     .hero-modern {
-        min-height: calc(60vh - 70px);
+        aspect-ratio: 4 / 3; /* タブレットでは少し縦長に */
+        min-height: 350px;
         margin-top: 70px;
         background-attachment: scroll;
         background-size: cover;
@@ -1437,7 +1442,9 @@ body::after {
 
 @media (max-width: 480px) {
     .hero-modern {
-        min-height: calc(50vh - 70px);
+        aspect-ratio: 3 / 4; /* スマホでは縦長に */
+        min-height: 300px;
+        max-height: 80vh; /* スマホでは画面の80%まで */
         margin-top: 70px;
         background-size: cover;
         background-position: center center;
@@ -1446,12 +1453,6 @@ body::after {
     .hero-bg-image {
         background-size: cover;
         background-position: center center;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-modern {
-        min-height: 90vh;
     }
     
     .hero-content {
