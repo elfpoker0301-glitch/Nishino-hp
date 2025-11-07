@@ -5,6 +5,9 @@ console.log('メインスクリプト読み込み開始');
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM読み込み完了');
     
+    // ローディング中はbodyのスクロールを防止
+    document.body.classList.add('loading');
+    
     // テスト用お知らせデータの初期化
     initTestNewsData();
     
@@ -136,6 +139,9 @@ function hideLoadingScreen() {
     if (loadingScreen && loadingScreen.style.display !== 'none') {
         console.log('ローディング画面を隠します');
         loadingScreen.classList.add('fade-out');
+        
+        // bodyからloadingクラスを削除してスクロールを有効化
+        document.body.classList.remove('loading');
         
         if (mainContent) {
             mainContent.classList.add('show');
