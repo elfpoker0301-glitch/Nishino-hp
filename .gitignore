@@ -29,12 +29,6 @@ videos/
 *.mov
 *.avi
 
-# Large image files
-images/sample/
-images/works/work-slide-*.jpg
-images/works/work-slide-*.jpeg
-images/works/work-slide-*.JPG
-
 # Temporary files
 *.tmp
 *.temp
