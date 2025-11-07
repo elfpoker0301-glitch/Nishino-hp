@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お知らせ一覧 | 株式会社ニシボ</title>
+    <meta name="description" content="株式会社ニシボの最新お知らせ一覧。会社からの重要なお知らせや施工情報をお届けします。">
+    <link rel="icon" type="image/png" href="images/nishibo-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20250926-6">
+    
+    <!-- Favicon 完全対応 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/nishibo-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/nishibo-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/nishibo-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="images/nishibo-logo.png" alt="株式会社ニシボ" class="logo-image">
+                    </a>
+                </div>
+                <ul class="nav-menu desktop-nav" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">ホーム</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">会社概要</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="greeting.html" class="nav-link">代表挨拶</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">事業案内</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="works.html" class="nav-link">工事実績</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="branches.html" class="nav-link">支店情報</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link active">お知らせ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="recruit.html" class="nav-link">採用情報</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">お問い合わせ</a>
+                    </li>
+                </ul>
+                <!-- ハンバーガーメニュー削除 - 水平スクロールナビゲーションに変更 -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- ページヒーロー -->
+        <section class="page-header" style="background: linear-gradient(135deg, #1e293b 0%, #2563eb 30%, #3b82f6 70%, #1e40af 100%); padding: 80px 0 60px; position: relative; overflow: hidden;">
+            <!-- 装飾的背景要素 -->
+            <div style="position: absolute; top: -20%; right: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+            <div style="position: absolute; bottom: -15%; left: -5%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%); border-radius: 50%;"></div>
+            
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="page-header-content" style="text-align: center; color: white;">
+                    <nav class="breadcrumb" style="margin-bottom: 30px; justify-content: center;">
+                        <a href="index.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 500; transition: all 0.3s ease; padding: 8px 16px; border-radius: 20px; background: rgba(255,255,255,0.1);">ホーム</a>
+                        <span class="separator" style="color: rgba(255,255,255,0.5); margin: 0 15px; font-size: 1.2rem;">•</span>
+                        <span class="current" style="color: white; font-weight: 600; padding: 8px 16px; background: rgba(255,255,255,0.2); border-radius: 20px;">お知らせ</span>
+                    </nav>
+                    
+                    <!-- メインタイトル -->
+                    <div style="position: relative; display: inline-block;">
+                        <h1 class="page-title" style="
+                            font-size: 4rem; 
+                            font-weight: 900; 
+                            margin: 0; 
+                            letter-spacing: 0.1em; 
+                            background: linear-gradient(135deg, #ffffff, #e2e8f0, #ffffff);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            text-shadow: 0 0 30px rgba(255,255,255,0.3);
+                            position: relative;
+                            z-index: 2;
+                        ">
+                            お知らせ
+                        </h1>
+                        <!-- タイトル下の装飾ライン -->
+                        <div style="
+                            position: absolute; 
+                            bottom: -15px; 
+                            left: 50%; 
+                            transform: translateX(-50%); 
+                            width: 120px; 
+                            height: 6px; 
+                            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent); 
+                            border-radius: 3px;
+                            box-shadow: 0 0 20px rgba(255,255,255,0.5);
+                        "></div>
+                    </div>
+                    
+                    <p class="page-subtitle" style="
+                        font-size: 1.4rem; 
+                        margin-top: 25px; 
+                        opacity: 0.85; 
+                        font-weight: 300; 
+                        letter-spacing: 0.15em; 
+                        text-transform: uppercase;
+                        font-family: 'Orbitron', monospace;
+                        color: rgba(255,255,255,0.9);
+                    ">Latest News</p>
+                    
+                    <!-- サブテキスト -->
+                    <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        <p style="
+                            color: rgba(255,255,255,0.8); 
+                            font-size: 1.1rem; 
+                            line-height: 1.6; 
+                            font-weight: 400;
+                            margin: 0;
+                        ">
+                            最新情報 • 施工情報 • 重要なお知らせをお届けします
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- フィルター -->
+        <section class="news-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">すべて</button>
+                    <button class="filter-btn" data-filter="info">お知らせ</button>
+                    <button class="filter-btn" data-filter="work">施工情報</button>
+                    <button class="filter-btn" data-filter="important">重要</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- お知らせ一覧 -->
+        <section id="news-content" class="news-list-section">
+            <div class="container">
+                <div class="news-grid" id="news-grid">
+                    <!-- 動的に生成されるコンテンツ -->
+                    <div class="no-news-found" id="no-news-found" style="display: none;">
+                        <p>該当するお知らせがありません。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Nishibo</h4>
+                    <p><strong><span class="company-name footer-company-name">株式会社ニシボ</span></strong></p>
+                    <p>昭和61年創業。福岡を拠点に専門工事技術で社会インフラを支える建設会社です。</p>
+                    <p><em>安全・信頼・迅速対応で確かな技術をお届け</em></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul id="footer-services-list">
+                        <!-- 管理画面から動的に読み込まれるサービス一覧 -->
+                        <li><a href="services.html">建築工事全般</a></li>
+                        <li><a href="services.html">ダイヤモンドコア工事</a></li>
+                        <li><a href="services.html">各種アンカー工事</a></li>
+                        <li><a href="services.html">非破壊検査・X線調査</a></li>
+                        <li><a href="services.html">ウォールソー・ワイヤーソー工事</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="greeting.html">代表挨拶</a></li>
+                        <li><a href="works.html">工事実績</a></li>
+                        <li><a href="branches.html">支店情報</a></li>
+                        <li><a href="news.html">お知らせ</a></li>
+                        <li><a href="recruit.html">採用情報</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><strong>本社</strong></p>
+                    <p>📍 〒811-1311<br>福岡県福岡市南区横手3丁目39-19</p>
+                    <p>📞 092-592-6533（代表）<br>📠 092-592-6534</p>
+                    <p><strong>営業時間</strong><br>平日 8:30-17:30</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nishibo Corporation. All rights reserved. | <a href="privacy.html">プライバシーポリシー</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // お知らせ一覧の動的読み込み
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== news.html DOMContentLoaded開始 ===');
+            
+            // DOM要素の存在確認
+            const checkElements = () => {
+                const newsGrid = document.getElementById('news-grid');
+                const noNewsFound = document.getElementById('no-news-found');
+                console.log('要素確認 - newsGrid:', !!newsGrid, 'noNewsFound:', !!noNewsFound);
+                return newsGrid && noNewsFound;
+            };
+            
+            // 要素が見つからない場合はリトライ
+            const initializeWithRetry = (retryCount = 0) => {
+                if (checkElements()) {
+                    console.log('DOM要素確認完了 - 初期化開始');
+                    
+                    // script.jsの関数が利用可能か確認
+                    if (typeof initTestNewsData === 'function') {
+                        console.log('initTestNewsData関数が利用可能です');
+                        initTestNewsData(); // 明示的にテストデータを初期化
+                    } else {
+                        console.error('initTestNewsData関数が見つかりません');
+                    }
+                    
+                    // お知らせ読み込み実行
+                    setTimeout(() => {
+                        console.log('loadAllNews実行開始');
+                        loadAllNews();
+                    }, 200);
+                } else if (retryCount < 5) {
+                    console.log(`DOM要素が見つからないため再試行 (${retryCount + 1}/5)`);
+                    setTimeout(() => initializeWithRetry(retryCount + 1), 100);
+                } else {
+                    console.error('DOM要素が見つかりませんでした。HTMLマークアップを確認してください。');
+                }
+            };
+            
+            initializeWithRetry();
+        });
+
+
+
+        function loadAllNews() {
+            console.log('=== お知らせページ データ読み込み開始 ===');
+            
+            const newsGrid = document.getElementById('news-grid');
+            const noNewsFound = document.getElementById('no-news-found');
+            
+            console.log('newsGrid要素:', newsGrid);
+            console.log('noNewsFound要素:', noNewsFound);
+            
+            // 重要な要素の存在確認
+            if (!newsGrid) {
+                console.error('news-grid要素が見つかりません！');
+                return;
+            }
+            
+            if (!noNewsFound) {
+                console.error('no-news-found要素が見つかりません！HTMLを確認してください');
+                return;
+            }
+            
+            // LocalStorageの全体を確認
+            console.log('LocalStorage全体:', localStorage);
+            console.log('newsDataキー存在確認:', localStorage.getItem('newsData'));
+            
+            const newsData = JSON.parse(localStorage.getItem('newsData') || '[]');
+            console.log('パース後のnewsData:', newsData);
+            console.log('newsData件数:', newsData.length);
+            console.log('newsDataの型:', typeof newsData);
+            
+            // 既存のニュースアイテムを削除
+            if (newsGrid) {
+                const existingItems = newsGrid.querySelectorAll('.news-card');
+                console.log('既存のカード数:', existingItems.length);
+                existingItems.forEach(item => item.remove());
+            }
+            
+            if (newsData.length === 0) {
+                console.log('お知らせデータが空のため、"お知らせが見つかりません"を表示');
+                if (noNewsFound) {
+                    noNewsFound.style.display = 'block';
+                }
+                return;
+            }
+            
+            noNewsFound.style.display = 'none';
+            console.log('noNewsFoundを非表示にしました');
+            
+            // お知らせを日付順にソート（新しい順）
+            const sortedNews = newsData.sort((a, b) => new Date(b.date) - new Date(a.date));
+            console.log('ソート後のデータ:', sortedNews);
+            
+            // お知らせアイテムを生成
+            console.log('お知らせカード生成開始:', sortedNews.length + '件');
+            console.log('newsGrid詳細:', {
+                element: newsGrid,
+                tagName: newsGrid ? newsGrid.tagName : 'null',
+                id: newsGrid ? newsGrid.id : 'null',
+                className: newsGrid ? newsGrid.className : 'null',
+                childrenCount: newsGrid ? newsGrid.children.length : 0
+            });
+            console.log('noNewsFound詳細:', {
+                element: noNewsFound,
+                tagName: noNewsFound ? noNewsFound.tagName : 'null',
+                id: noNewsFound ? noNewsFound.id : 'null',
+                parent: noNewsFound ? noNewsFound.parentElement : 'null'
+            });
+            
+            sortedNews.forEach((news, index) => {
+                console.log(`カード${index + 1}生成中:`, news.title);
+                try {
+                    const newsCard = createNewsCard(news);
+                    console.log(`カード${index + 1}生成完了:`, newsCard);
+                    
+                    // DOM挿入を試行
+                    console.log('DOM挿入前の状態:', {
+                        newsGridChildren: newsGrid.children.length,
+                        noNewsFoundParent: noNewsFound.parentElement
+                    });
+                    
+                    newsGrid.insertBefore(newsCard, noNewsFound);
+                    
+                    console.log('DOM挿入後の状態:', {
+                        newsGridChildren: newsGrid.children.length,
+                        cardAdded: newsGrid.contains(newsCard)
+                    });
+                    
+                    // アニメーション遅延
+                    setTimeout(() => {
+                        if (newsCard) {
+                            newsCard.style.opacity = '1';
+                            newsCard.style.transform = 'translateY(0)';
+                        }
+                    }, index * 100);
+                } catch (error) {
+                    console.error(`カード${index + 1}生成エラー:`, error);
+                    console.error('エラー詳細:', {
+                        newsGrid: !!newsGrid,
+                        noNewsFound: !!noNewsFound,
+                        newsCard: !!createNewsCard,
+                        errorStack: error.stack
+                    });
+                }
+            });
+            console.log('全カード生成完了 - 最終確認:', {
+                totalCards: newsGrid.querySelectorAll('.news-card').length,
+                gridChildren: newsGrid.children.length
+            });
+            
+            // カード生成後にフィルター機能を初期化
+            setTimeout(() => {
+                console.log('カード生成後のフィルター初期化実行');
+                initializeNewsFilter();
+            }, 500);
+        }
+
+        function createNewsCard(news) {
+            console.log('createNewsCard開始:', news);
+            try {
+                const newsCard = document.createElement('div');
+                newsCard.className = 'news-card';
+                newsCard.setAttribute('data-category', news.category);
+                console.log('カード作成:', {
+                    title: news.title,
+                    category: news.category,
+                    dataCategory: newsCard.getAttribute('data-category')
+                });
+                newsCard.style.opacity = '0';
+                newsCard.style.transform = 'translateY(20px)';
+                newsCard.style.transition = 'all 0.6s ease';
+                
+                const formattedDate = formatDate(news.date);
+                const categoryName = getCategoryName(news.category);
+                
+                console.log('フォーマット済みデータ:', {
+                    formattedDate,
+                    categoryName,
+                    title: news.title,
+                    content: news.content
+                });
+                
+                newsCard.innerHTML = `
+                    <div class="news-card-header">
+                        <div class="news-card-date">${formattedDate}</div>
+                        <div class="news-card-category category-${news.category}">${categoryName}</div>
+                    </div>
+                    <div class="news-card-body">
+                        <h3 class="news-card-title">${news.title}</h3>
+                        <p class="news-card-content">${news.content}</p>
+                    </div>
+                `;
+                
+                console.log('createNewsCard完了:', {
+                    element: newsCard,
+                    className: newsCard.className,
+                    innerHTML: newsCard.innerHTML.substring(0, 100) + '...',
+                    hasParent: !!newsCard.parentElement
+                });
+                return newsCard;
+            } catch (error) {
+                console.error('createNewsCardエラー:', error);
+                // フォールバック用の簡単なカード
+                const fallbackCard = document.createElement('div');
+                fallbackCard.className = 'news-card';
+                fallbackCard.innerHTML = `<div>エラー: ${news.title}</div>`;
+                return fallbackCard;
+            }
+        }
+
+        function initializeNewsFilter() {
+            console.log('フィルター機能初期化開始');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            console.log('フィルターボタン数:', filterButtons.length);
+            
+            if (filterButtons.length === 0) {
+                console.error('フィルターボタンが見つかりません！');
+                return;
+            }
+            
+            filterButtons.forEach((button, index) => {
+                console.log(`ボタン${index + 1}:`, button.getAttribute('data-filter'));
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+                    console.log('フィルターボタンクリック:', filter);
+                    
+                    // アクティブボタンの切り替え
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // アイテムの表示/非表示
+                    filterNewsItems(filter);
+                });
+            });
+            
+            console.log('フィルター機能初期化完了');
+        }
+
+        function filterNewsItems(filter) {
+            console.log('フィルター実行:', filter);
+            const newsCards = document.querySelectorAll('.news-card');
+            let visibleCount = 0;
+            
+            console.log('対象カード数:', newsCards.length);
+            
+            newsCards.forEach((card, index) => {
+                const category = card.getAttribute('data-category');
+                console.log(`カード${index + 1}: カテゴリ=${category}, フィルター=${filter}`);
+                
+                let shouldShow = false;
+                
+                if (filter === 'all') {
+                    shouldShow = true;
+                } else if (filter === category) {
+                    // data-categoryの値と直接比較
+                    shouldShow = true;
+                }
+                
+                if (shouldShow) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, visibleCount * 50);
+                    visibleCount++;
+                    console.log(`カード${index + 1}: 表示`);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                    console.log(`カード${index + 1}: 非表示`);
+                }
+            });
+
+            console.log('表示されるカード数:', visibleCount);
+
+            // 該当なしメッセージの表示制御
+            const noNewsFound = document.getElementById('no-news-found');
+            if (visibleCount === 0) {
+                noNewsFound.style.display = 'block';
+            } else {
+                noNewsFound.style.display = 'none';
+            }
+        }
+
+        function formatDate(dateString) {
+            console.log('formatDate入力:', dateString);
+            try {
+                const date = new Date(dateString);
+                if (isNaN(date.getTime())) {
+                    console.warn('無効な日付:', dateString);
+                    return dateString; // 元の値をそのまま返す
+                }
+                const year = date.getFullYear();
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const day = String(date.getDate()).padStart(2, '0');
+                const result = `${year}.${month}.${day}`;
+                console.log('formatDate結果:', result);
+                return result;
+            } catch (error) {
+                console.error('formatDateエラー:', error);
+                return dateString || '日付不明';
+            }
+        }
+
+        function getCategoryName(category) {
+            const categories = {
+                'info': 'お知らせ',
+                'work': '施工情報',
+                'important': '重要'
+            };
+            return categories[category] || category;
+        }
+    </script>
+</body>
+</html>

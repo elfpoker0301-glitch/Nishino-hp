@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページが見つかりません - 404エラー | 株式会社ニシボ</title>
+    <meta name="description" content="お探しのページが見つかりません。株式会社ニシボのメインページにお戻りください。">
+    <link rel="icon" type="image/png" href="images/nishibo-icon.png">
+    <link rel="stylesheet" href="css/style.css?v=20250925-1">
+    <style>
+        .error-container {
+            max-width: 600px;
+            margin: 5rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            color: #e2e8f0;
+            line-height: 1;
+            margin-bottom: 1rem;
+            font-family: 'Orbitron', monospace;
+        }
+        .error-title {
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        .error-message {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .error-btn {
+            background: #2563eb;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .error-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        .error-btn-outline {
+            background: transparent;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+        .error-btn-outline:hover {
+            background: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="images/nishibo-logo.png" alt="株式会社ニシボ" class="logo-image">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- エラーコンテンツ -->
+    <main class="main">
+        <div class="error-container">
+            <div class="error-code">404</div>
+            <h1 class="error-title">ページが見つかりません</h1>
+            <p class="error-message">
+                申し訳ございません。お探しのページは見つかりませんでした。<br>
+                ページが移動または削除された可能性があります。
+            </p>
+            <div class="error-actions">
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fas fa-home"></i>
+                    ホームに戻る
+                </a>
+                <a href="works.html" class="btn btn-outline-primary">
+                    <i class="fas fa-eye"></i>
+                    工事実績を見る
+                </a>
+                <a href="about.html" class="btn btn-outline-secondary">
+                    <i class="fas fa-building"></i>
+                    会社概要
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>Nishibo</h3>
+                        <p>株式会社ニシボ</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>お問い合わせ</h4>
+                    <div class="footer-contact">
+                        <p><strong>本社</strong></p>
+                        <p>〒811-1311<br>福岡県福岡市南区横手3丁目39-19</p>
+                        <p>TEL: 092-592-6533<br>FAX: 092-592-6534</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nishibo Corporation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

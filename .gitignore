@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup files
+*.bak
+*-backup.html
+*backup.html
+
+# Debug files
+debug_*.html
+debug_*.js
+
+# Node modules (if any)
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# Video files (large)
+videos/
+*.mp4
+*.mov
+*.avi
+
+# Large image files
+images/sample/
+images/works/work-slide-*.jpg
+images/works/work-slide-*.jpeg
+images/works/work-slide-*.JPG
+
+# Temporary files
+*.tmp
+*.temp
