@@ -1444,10 +1444,11 @@ body::after {
     .hero-modern {
         aspect-ratio: 16 / 9; /* スマホも16:9に統一 */
         min-height: auto; /* 横幅基準で自動調整 */
-        max-height: none; /* 制限を解除 */
+        max-height: none; /* 制限を解除してスクロール可能に */
         margin-top: 70px;
         background-size: cover;
         background-position: center center;
+        overflow: visible; /* スマホではoverflowをvisibleに */
     }
     
     .hero-bg-image {
