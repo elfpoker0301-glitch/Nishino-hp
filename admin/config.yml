@@ -2,9 +2,6 @@ backend:
   name: git-gateway
   branch: main
 
-# ローカル開発用（本番環境では無効化されます）
-local_backend: true
-
 # 日本語対応
 locale: ja
 
