@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 事業案内詳細ページの読み込み（事業案内ページでのみ実行）
     if (document.body.classList.contains('services-detail-page')) {
         loadServicesDetailData();
+        loadServicesWorksSlider(); // 事業案内ページ専用スライダーを読み込み
     }
     
     // ハンバーガーメニュー削除 - 水平スクロールナビゲーション使用
@@ -545,6 +546,56 @@ function loadWorksSlider() {
         console.log('工事実績スライダーを読み込みました');
     } catch (error) {
         console.error('工事実績スライダーの読み込みエラー:', error);
+    }
+}
+
+// 事業案内ページ専用のスライダー読み込み
+function loadServicesWorksSlider() {
+    try {
+        const servicesWorksSlider = document.getElementById('servicesWorksSlider');
+        
+        if (!servicesWorksSlider) return;
+        
+        // 事業案内ページ専用のサンプルデータ
+        const servicesSampleWorks = [
+            {
+                title: 'ダイヤモンドコア施工例 1',
+                image: 'images/services-slider/services-slide-01.jpg'
+            },
+            {
+                title: 'アンカー工事施工例 1',
+                image: 'images/services-slider/services-slide-02.jpg'
+            },
+            {
+                title: 'ワイヤーソー施工例 1',
+                image: 'images/services-slider/services-slide-03.jpg'
+            },
+            {
+                title: 'ウォールソー施工例 1',
+                image: 'images/services-slider/services-slide-04.jpg'
+            },
+            {
+                title: '非破壊検査施工例 1',
+                image: 'images/services-slider/services-slide-05.jpg'
+            },
+            {
+                title: '建築工事施工例 1',
+                image: 'images/services-slider/services-slide-06.jpg'
+            }
+        ];
+        
+        const slideHtml = servicesSampleWorks.map(work => `
+            <div class="work-slide">
+                <img src="${work.image}" alt="${work.title}" loading="lazy">
+            </div>
+        `).join('');
+        
+        // 3回複製して無限スクロール用に画面を埋める
+        servicesWorksSlider.innerHTML = slideHtml + slideHtml + slideHtml;
+        
+        console.log('事業案内ページのスライダーを読み込みました');
+    } catch (error) {
+        console.error('事業案内ページスライダーの読み込みエラー:', error);
     }
 }
 
