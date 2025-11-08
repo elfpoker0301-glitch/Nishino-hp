@@ -6,12 +6,12 @@
 ## ファイル命名規則
 以下のファイル名で画像を保存してください:
 
-1. `services-slide-01.jpg` - ダイヤモンドコア施工例
-2. `services-slide-02.jpg` - アンカー工事施工例
-3. `services-slide-03.jpg` - ワイヤーソー施工例
-4. `services-slide-04.jpg` - ウォールソー施工例
-5. `services-slide-05.jpg` - 非破壊検査施工例
-6. `services-slide-06.jpg` - 建築工事施工例
+1. `service-slide-01.jpg` - ダイヤモンドコア施工例
+2. `service-slide-02.jpg` - アンカー工事施工例
+3. `service-slide-03.jpg` - ワイヤーソー施工例
+4. `service-slide-04.jpg` - ウォールソー施工例
+5. `service-slide-05.jpg` - 非破壊検査施工例
+6. `service-slide-06.jpg` - 建築工事施工例
 
 ## 推奨画像サイズ
 - 横幅: 1200px以上

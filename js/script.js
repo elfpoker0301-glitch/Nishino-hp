@@ -560,27 +560,27 @@ function loadServicesWorksSlider() {
         const servicesSampleWorks = [
             {
                 title: 'ダイヤモンドコア施工例 1',
-                image: 'images/services-slider/services-slide-01.jpg'
+                image: 'images/services-slider/service-slide-01.jpg'
             },
             {
                 title: 'アンカー工事施工例 1',
-                image: 'images/services-slider/services-slide-02.jpg'
+                image: 'images/services-slider/service-slide-02.jpg'
             },
             {
                 title: 'ワイヤーソー施工例 1',
-                image: 'images/services-slider/services-slide-03.jpg'
+                image: 'images/services-slider/service-slide-03.jpg'
             },
             {
                 title: 'ウォールソー施工例 1',
-                image: 'images/services-slider/services-slide-04.jpg'
+                image: 'images/services-slider/service-slide-04.jpg'
             },
             {
                 title: '非破壊検査施工例 1',
-                image: 'images/services-slider/services-slide-05.jpg'
+                image: 'images/services-slider/service-slide-05.jpg'
             },
             {
                 title: '建築工事施工例 1',
-                image: 'images/services-slider/services-slide-06.jpg'
+                image: 'images/services-slider/service-slide-06.jpg'
             }
         ];
         
