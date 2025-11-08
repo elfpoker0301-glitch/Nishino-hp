@@ -1,7 +1,9 @@
 // 管理画面のJavaScript
 
 // セキュアなパスワード管理
-// パスワードをソースコードに直接記載しない
+// 本番環境用の固定パスワード（必要に応じて変更してください）
+const PRODUCTION_PASSWORD = 'nishibo2024';
+
 const getAdminPassword = () => {
     // 環境変数が利用可能な場合は使用
     if (typeof process !== 'undefined' && process.env && process.env.ADMIN_PASSWORD) {
@@ -13,19 +15,8 @@ const getAdminPassword = () => {
         return 'dev_password_2024'; // 開発用パスワード
     }
     
-    // 本番環境では入力を求める
-    const savedPassword = sessionStorage.getItem('admin_master_password');
-    if (savedPassword) {
-        return savedPassword;
-    }
-    
-    const password = prompt('管理者マスターパスワードを入力してください:');
-    if (password) {
-        sessionStorage.setItem('admin_master_password', password);
-        return password;
-    }
-    
-    return null;
+    // 本番環境では固定パスワードを使用
+    return PRODUCTION_PASSWORD;
 };
 
 const ADMIN_PASSWORD = getAdminPassword();
