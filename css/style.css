@@ -9063,3 +9063,14 @@ body:not(.loading) .main-content {
     }
 }
 
+/* 事業案内ページのスライダーセクション - 余白なし */
+.services-detail-page .works-showcase-section {
+    margin: 0;
+    padding: 0;
+}
+
+.services-detail-page .works-slider-container {
+    margin: 0;
+    padding: 0;
+}
+
