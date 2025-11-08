@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('loading');
     }
     
-    // テスト用お知らせデータの初期化
-    initTestNewsData();
+    // テスト用お知らせデータの初期化（現在は使用していません - Netlify CMSを使用）
+    // initTestNewsData();
     
     // 創業年カウンター画面の初期化
     initYearCounter();

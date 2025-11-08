@@ -252,13 +252,13 @@
                 if (checkElements()) {
                     console.log('DOM要素確認完了 - 初期化開始');
                     
-                    // script.jsの関数が利用可能か確認
-                    if (typeof initTestNewsData === 'function') {
-                        console.log('initTestNewsData関数が利用可能です');
-                        initTestNewsData(); // 明示的にテストデータを初期化
-                    } else {
-                        console.error('initTestNewsData関数が見つかりません');
-                    }
+                    // テストデータの初期化は使用しません（Netlify CMSを使用）
+                    // if (typeof initTestNewsData === 'function') {
+                    //     console.log('initTestNewsData関数が利用可能です');
+                    //     initTestNewsData(); // 明示的にテストデータを初期化
+                    // } else {
+                    //     console.error('initTestNewsData関数が見つかりません');
+                    // }
                     
                     // お知らせ読み込み実行
                     setTimeout(() => {
