@@ -277,7 +277,7 @@
 
 
 
-        function loadAllNews() {
+        async function loadAllNews() {
             console.log('=== お知らせページ データ読み込み開始 ===');
             
             const newsGrid = document.getElementById('news-grid');
@@ -297,14 +297,18 @@
                 return;
             }
             
-            // LocalStorageの全体を確認
-            console.log('LocalStorage全体:', localStorage);
-            console.log('newsDataキー存在確認:', localStorage.getItem('newsData'));
-            
-            const newsData = JSON.parse(localStorage.getItem('newsData') || '[]');
-            console.log('パース後のnewsData:', newsData);
+            // Markdownファイルから読み込み（フォールバックでLocalStorage）
+            let newsData = [];
+            try {
+                console.log('Markdownファイルから読み込み開始...');
+                newsData = await loadNewsFromMarkdown();
+                console.log('Markdownから読み込み:', newsData.length + '件');
+            } catch (error) {
+                console.log('Markdownの読み込み失敗、LocalStorageにフォールバック:', error);
+                newsData = JSON.parse(localStorage.getItem('newsData') || '[]');
+            }
+            console.log('最終的なnewsData:', newsData);
             console.log('newsData件数:', newsData.length);
-            console.log('newsDataの型:', typeof newsData);
             
             // 既存のニュースアイテムを削除
             if (newsGrid) {
