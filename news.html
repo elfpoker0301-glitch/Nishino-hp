@@ -298,16 +298,22 @@
                 return;
             }
             
-            // Markdownファイルから読み込み
+            // Markdownファイルから直接読み込み（cms-loader.jsのloadNewsFromMarkdown関数を使用）
             let newsData = [];
-            try {
-                console.log('Markdownファイルから読み込み開始...');
-                newsData = await loadNewsFromMarkdown();
-                console.log('Markdownから読み込み:', newsData.length + '件');
-            } catch (error) {
-                console.log('Markdownの読み込み失敗:', error);
-                newsData = [];
+            
+            if (typeof loadNewsFromMarkdown === 'function') {
+                try {
+                    console.log('Markdownファイルから読み込み開始...');
+                    newsData = await loadNewsFromMarkdown();
+                    console.log('Markdownから読み込み成功:', newsData.length + '件');
+                } catch (error) {
+                    console.error('Markdownの読み込み失敗:', error);
+                    newsData = [];
+                }
+            } else {
+                console.error('loadNewsFromMarkdown関数が見つかりません');
             }
+            
             console.log('最終的なnewsData:', newsData);
             console.log('newsData件数:', newsData.length);
             
