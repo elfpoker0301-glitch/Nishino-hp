@@ -12,6 +12,7 @@
 4. `service-slide-04.jpg` - ウォールソー施工例
 5. `service-slide-05.jpg` - 非破壊検査施工例
 6. `service-slide-06.jpg` - 建築工事施工例
+7. `service-slide-07.jpg` - 施工例7
 
 ## 推奨画像サイズ
 - 横幅: 1200px以上
@@ -24,7 +25,7 @@
 - ホームページの工事実績スライダー（`images/works/`）とは**別の画像**を使用してください
 - この事業案内ページ専用スライダーは、ホームのスライダーと**同期しません**
 - 画像は自動で無限ループ表示されます
-- 画像は6枚固定です（増やす場合は`js/script.js`の`loadServicesWorksSlider()`関数を編集）
+- 画像は7枚使用します（増やす場合は`js/script.js`の`loadServicesWorksSlider()`関数を編集）
 
 ## 画像の追加・変更方法
 1. このフォルダに指定されたファイル名で画像を保存

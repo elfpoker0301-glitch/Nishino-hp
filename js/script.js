@@ -581,6 +581,10 @@ function loadServicesWorksSlider() {
             {
                 title: '建築工事施工例 1',
                 image: 'images/services-slider/service-slide-06.jpg'
+            },
+            {
+                title: '施工例 7',
+                image: 'images/services-slider/service-slide-07.jpg'
             }
         ];
         
