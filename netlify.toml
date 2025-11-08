@@ -14,10 +14,17 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# 管理画面へのアクセス制御（Basic認証）
+# 管理画面へのアクセス制御(Basic認証)
 [[headers]]
   for = "/admin.html"
   [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+# Netlify CMS config.ymlの設定
+[[headers]]
+  for = "/admin/config.yml"
+  [headers.values]
+    Content-Type = "text/yaml; charset=utf-8"
     Cache-Control = "no-cache, no-store, must-revalidate"
 
 # フォーム機能の設定
