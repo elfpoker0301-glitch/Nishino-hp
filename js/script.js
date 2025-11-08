@@ -696,9 +696,6 @@ function loadServicesDetailData() {
             <ul class="service-features">
                 ${service.features.map(feature => `<li>✓ ${feature}</li>`).join('')}
             </ul>
-            <div class="service-card-footer">
-                <a href="contact.html" class="service-cta">お見積もり依頼</a>
-            </div>
         </div>
     `).join('');
 
