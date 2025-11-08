@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // テスト用お知らせデータの初期化（現在は使用していません - Netlify CMSを使用）
     // initTestNewsData();
     
+    // ヒーローセクションのスライドショーを初期化
+    initHeroSlideshow();
+    
     // 創業年カウンター画面の初期化
     initYearCounter();
     
@@ -85,6 +88,26 @@ function initYearCounter() {
             hideLoadingScreen();
         }
     });
+}
+
+// ヒーローセクションのスライドショーを初期化
+function initHeroSlideshow() {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length === 0) return;
+    
+    let currentSlide = 0;
+    
+    // 5秒ごとにスライドを切り替え
+    setInterval(() => {
+        // 現在のスライドを非表示
+        slides[currentSlide].classList.remove('active');
+        
+        // 次のスライドへ
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        // 次のスライドを表示
+        slides[currentSlide].classList.add('active');
+    }, 5000);
 }
 
 // 創業年カウンター実行

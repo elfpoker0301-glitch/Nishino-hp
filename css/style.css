@@ -630,11 +630,29 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/sample/hero-bg.png?v=202411061') no-repeat;
-    background-size: cover; /* アスペクト比を保ちながらカバー */
+    background-size: cover;
     background-position: center center;
     background-attachment: scroll;
     z-index: 1;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-bg-image.active {
+    opacity: 1;
+}
+
+/* 2枚のスライド画像 */
+.hero-bg-image.hero-slide:nth-child(3) {
+    background: url('../images/sample/hero-bg.png?v=202411061') no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero-bg-image.hero-slide:nth-child(4) {
+    background: url('../images/sample/hero-bg-2.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .hero-bg-primary {
@@ -7637,7 +7655,7 @@ body:not(.loading) .main-content {
 }
 
 .hero-modern .catchcopy-text {
-    font-size: 4.5rem;
+    font-size: 3.78rem;
     font-weight: 900;
     color: white;
     line-height: 1.1;
@@ -7719,7 +7737,7 @@ body:not(.loading) .main-content {
     }
     
     .hero-modern .catchcopy-text {
-        font-size: 3.5rem;
+        font-size: 2.94rem;
     }
 }
 
@@ -7735,7 +7753,7 @@ body:not(.loading) .main-content {
     }
     
     .hero-modern .catchcopy-text {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
         margin-bottom: 1rem;
         letter-spacing: 0.05em;
     }
@@ -7760,7 +7778,7 @@ body:not(.loading) .main-content {
     }
     
     .hero-modern .catchcopy-text {
-        font-size: 1.8rem;
+        font-size: 1.512rem;
         margin-bottom: 0.8rem;
         letter-spacing: 0.03em;
     }
@@ -8042,6 +8060,60 @@ body:not(.loading) .main-content {
     transform: translateX(0.3rem);
 }
 
+/* 一括リスト表示スタイル */
+.works-list-unified {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    background: white;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.works-items-all {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.works-items-all li {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    color: #374151;
+    font-weight: 500;
+    position: relative;
+    padding-left: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.works-items-all li:nth-child(odd) {
+    border-right: 1px solid #e5e7eb;
+}
+
+.works-items-all li::before {
+    content: '▶';
+    position: absolute;
+    left: 1rem;
+    color: #3b82f6;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.works-items-all li:hover {
+    color: #1d4ed8;
+    background: rgba(59, 130, 246, 0.05);
+    padding-left: 3rem;
+}
+
+.works-items-all li:hover::before {
+    color: #1d4ed8;
+    transform: translateX(0.3rem);
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
     .works-list-grid {
@@ -8055,6 +8127,23 @@ body:not(.loading) .main-content {
     
     .works-category h3 {
         font-size: 1.2rem;
+    }
+
+    .works-list-unified {
+        padding: 1.5rem;
+        margin: 2rem 1rem 0;
+    }
+
+    .works-items-all {
+        grid-template-columns: 1fr;
+    }
+
+    .works-items-all li {
+        border-right: none;
+    }
+
+    .works-items-all li:nth-child(odd) {
+        border-right: none;
     }
 }
 
