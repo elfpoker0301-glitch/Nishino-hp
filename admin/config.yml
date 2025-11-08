@@ -21,7 +21,14 @@ collections:
     fields:
       - {label: "タイトル", name: "title", widget: "string", required: true}
       - {label: "公開日", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: true}
-      - {label: "カテゴリ", name: "category", widget: "select", options: ["お知らせ", "施工情報", "重要"], required: true}
+      - label: "カテゴリ"
+        name: "category"
+        widget: "select"
+        required: true
+        options:
+          - {label: "お知らせ", value: "info"}
+          - {label: "施工情報", value: "work"}
+          - {label: "重要", value: "important"}
       - {label: "本文", name: "body", widget: "markdown", required: true}
       - {label: "公開", name: "published", widget: "boolean", default: true}
     
@@ -31,13 +38,13 @@ collections:
     view_filters:
       - label: "お知らせ"
         field: category
-        pattern: "お知らせ"
+        pattern: "info"
       - label: "施工情報"
         field: category
-        pattern: "施工情報"
+        pattern: "work"
       - label: "重要"
         field: category
-        pattern: "重要"
+        pattern: "important"
       - label: "公開中"
         field: published
         pattern: true
