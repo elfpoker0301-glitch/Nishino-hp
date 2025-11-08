@@ -37,24 +37,24 @@ function parseMarkdown(text) {
  */
 async function loadNewsFromMarkdown() {
     try {
-        // GitHub Pages上のcontent/newsフォルダからファイルリストを取得
-        const response = await fetch('/content/news/');
-        const text = await response.text();
+        // GitHub APIを使ってファイルリストを取得
+        const apiUrl = 'https://api.github.com/repos/elfpoker0301-glitch/Nishino-hp/contents/content/news';
+        const response = await fetch(apiUrl);
         
-        // HTMLから.mdファイルのリンクを抽出
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(text, 'text/html');
-        const links = Array.from(doc.querySelectorAll('a[href$=".md"]'));
-        const fileNames = links.map(link => link.getAttribute('href'));
+        if (!response.ok) {
+            throw new Error(`GitHub API error: ${response.status}`);
+        }
+        
+        const files = await response.json();
+        const fileNames = files
+            .filter(file => file.name.endsWith('.md'))
+            .map(file => file.name);
+        
+        console.log('GitHub APIから取得したファイル:', fileNames);
         
         if (fileNames.length === 0) {
-            console.log('Markdownファイルが見つかりません。手動リストを使用します。');
-            // フォールバック: 既知のファイル名を使用
-            const knownFiles = [
-                '2025-11-07-homepage-renewal.md',
-                '2025-11-01-fukuoka-project-completed.md'
-            ];
-            return await loadNewsFiles(knownFiles);
+            console.log('Markdownファイルが見つかりません');
+            return [];
         }
         
         return await loadNewsFiles(fileNames);
