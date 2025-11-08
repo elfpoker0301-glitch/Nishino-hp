@@ -298,15 +298,15 @@
                 return;
             }
             
-            // Markdownファイルから読み込み（フォールバックでLocalStorage）
+            // Markdownファイルから読み込み
             let newsData = [];
             try {
                 console.log('Markdownファイルから読み込み開始...');
                 newsData = await loadNewsFromMarkdown();
                 console.log('Markdownから読み込み:', newsData.length + '件');
             } catch (error) {
-                console.log('Markdownの読み込み失敗、LocalStorageにフォールバック:', error);
-                newsData = JSON.parse(localStorage.getItem('newsData') || '[]');
+                console.log('Markdownの読み込み失敗:', error);
+                newsData = [];
             }
             console.log('最終的なnewsData:', newsData);
             console.log('newsData件数:', newsData.length);

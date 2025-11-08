@@ -331,14 +331,14 @@ async function loadNewsData() {
             return;
         }
         
-        // Markdownファイルから読み込み（フォールバックでLocalStorage）
+        // Markdownファイルから読み込み
         let newsData = [];
         try {
             newsData = await loadNewsFromMarkdown();
             console.log('Markdownから読み込み:', newsData.length + '件');
         } catch (error) {
-            console.log('Markdownの読み込み失敗、LocalStorageにフォールバック');
-            newsData = JSON.parse(localStorage.getItem('newsData') || '[]');
+            console.log('Markdownの読み込み失敗:', error);
+            newsData = [];
         }
         
         if (newsData.length === 0) {
