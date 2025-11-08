@@ -4916,6 +4916,36 @@ input[type="submit"], button[type="submit"] {
     margin: 0 auto;
 }
 
+/* 統一グリッドレイアウト（分類なし） */
+.clients-unified-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clients-unified-grid .client-item {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #e2e8f0;
+    font-weight: 600;
+    color: #334155;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.clients-unified-grid .client-item:hover {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    border-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+}
+
 .client-item {
     background: white;
     padding: 1.5rem;
@@ -7713,6 +7743,172 @@ body:not(.loading) .main-content {
         font-size: 0.5rem;
         bottom: 2px;
         right: 2px;
+    }
+}
+
+/* 主要取引先統一グリッドのレスポンシブ対応 */
+@media (max-width: 768px) {
+    .clients-unified-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .clients-unified-grid .client-item {
+        padding: 15px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .clients-unified-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .clients-unified-grid .client-item {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* 会社情報リストスタイル */
+.company-info-list {
+    background: white;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.info-section {
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.info-section:last-child {
+    border-bottom: none;
+}
+
+.info-section-title {
+    background: #f3f4f6;
+    padding: 12px 20px;
+    margin: 0 0 15px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+    border-radius: 4px;
+}
+
+.info-section-content {
+    padding: 0 20px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #1f2937;
+}
+
+/* 会社概要ページのレスポンシブ対応 */
+@media (max-width: 768px) {
+    .company-info-list {
+        padding: 0 15px;
+    }
+    
+    .info-section {
+        padding: 15px 0;
+    }
+    
+    .info-section-title {
+        font-size: 0.95rem;
+        padding: 10px 15px;
+    }
+    
+    .info-section-content {
+        padding: 0 15px;
+        font-size: 0.95rem;
+    }
+    
+    /* 企業理念セクション */
+    .philosophy-section div[style*="padding: 60px"] {
+        padding: 30px 20px !important;
+    }
+    
+    .philosophy-section p {
+        font-size: 1.1rem !important;
+        line-height: 1.8 !important;
+    }
+    
+    /* 会社情報カード */
+    .about > div > div[style*="padding: 40px"] {
+        padding: 25px 20px !important;
+    }
+    
+    /* 主要取引先グリッド */
+    .clients-section div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    
+    .clients-section div[style*="padding: 25px"] {
+        padding: 18px 20px !important;
+        font-size: 0.95rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* ページヘッダー調整 */
+    .page-header h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .page-header .page-subtitle {
+        font-size: 1rem !important;
+    }
+    
+    /* 企業理念セクション */
+    .philosophy-section h2 {
+        font-size: 2rem !important;
+    }
+    
+    .philosophy-section div[style*="padding: 60px"],
+    .philosophy-section div[style*="padding: 30px"] {
+        padding: 20px 15px !important;
+    }
+    
+    .philosophy-section p {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+    }
+    
+    /* 会社情報セクション */
+    .about h2 {
+        font-size: 2rem !important;
+    }
+    
+    .company-info-list {
+        padding: 0 10px;
+    }
+    
+    .info-section {
+        padding: 12px 0;
+    }
+    
+    .info-section-title {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    
+    .info-section-content {
+        padding: 0 12px;
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+    
+    /* 主要取引先 */
+    .clients-section h2 {
+        font-size: 2rem !important;
+    }
+    
+    .clients-section div[style*="padding: 25px"],
+    .clients-section div[style*="padding: 18px"] {
+        padding: 15px !important;
+        font-size: 0.9rem !important;
     }
 }
 
