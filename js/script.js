@@ -320,18 +320,25 @@ function initHoverImageBackground() {
 }
 
 // ニュースデータの読み込み
-function loadNewsData() {
+async function loadNewsData() {
     try {
-        const newsData = JSON.parse(localStorage.getItem('newsData') || '[]');
         const newsContainer = document.getElementById('news-list');
         
         console.log('=== お知らせデータ読み込み開始 ===');
-        console.log('LocalStorage newsData:', newsData);
-        console.log('news-list要素:', newsContainer);
         
         if (!newsContainer) {
             console.log('news-listコンテナが見つかりません');
             return;
+        }
+        
+        // Markdownファイルから読み込み（フォールバックでLocalStorage）
+        let newsData = [];
+        try {
+            newsData = await loadNewsFromMarkdown();
+            console.log('Markdownから読み込み:', newsData.length + '件');
+        } catch (error) {
+            console.log('Markdownの読み込み失敗、LocalStorageにフォールバック');
+            newsData = JSON.parse(localStorage.getItem('newsData') || '[]');
         }
         
         if (newsData.length === 0) {
@@ -356,24 +363,16 @@ function loadNewsData() {
             return;
         }
         
-        // 日付でソートして最新2件を取得
-        const sortedNews = newsData.sort((a, b) => new Date(b.date) - new Date(a.date));
-        const latestNews = sortedNews.slice(0, 2);
+        // 最新2件を取得
+        const latestNews = newsData.slice(0, 2);
         
         console.log('最新ニュースをHTML表示します:', latestNews);
-        
-        // カテゴリ名のマッピング
-        const categoryNames = {
-            'info': 'お知らせ',
-            'work': '施工情報',
-            'important': '重要'
-        };
         
         newsContainer.innerHTML = latestNews.map(news => `
             <div class="news-item" data-aos="fade-up">
                 <div class="news-date">${news.date.replace(/-/g, '.')}</div>
                 <div class="news-content">
-                    <span class="news-category">${categoryNames[news.category] || news.category}</span>
+                    <span class="news-category">${news.category}</span>
                     <h3 class="news-title">${news.title}</h3>
                 </div>
             </div>
