@@ -557,13 +557,13 @@ body::after {
 /* モバイル表示時のページヘッダー調整 */
 @media screen and (max-width: 768px) {
     .page-header {
-        margin-top: 100px !important;
+        margin-top: 120px !important;
     }
 }
 
 @media screen and (max-width: 480px) {
     .page-header {
-        margin-top: 110px !important;
+        margin-top: 130px !important;
     }
 }
 
@@ -605,17 +605,17 @@ body::after {
 /* モバイル表示時のヒーローセクション調整 */
 @media screen and (max-width: 768px) {
     .hero-modern {
-        margin-top: 100px; /* モバイル時はヘッダー + 余白を十分に確保 */
+        margin-top: 120px; /* モバイル時はヘッダー + 余白をさらに大きく確保 */
         min-height: 300px;
-        max-height: calc(100vh - 100px);
+        max-height: calc(100vh - 120px);
     }
 }
 
 @media screen and (max-width: 480px) {
     .hero-modern {
-        margin-top: 110px; /* 小さい画面ではさらに大きく調整 */
+        margin-top: 130px; /* 小さい画面では更に大きく調整 */
         min-height: 250px;
-        max-height: calc(100vh - 110px);
+        max-height: calc(100vh - 130px);
         aspect-ratio: 4 / 3; /* 縦長の比率に調整 */
     }
 }
