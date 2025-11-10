@@ -338,6 +338,10 @@ body::after {
         padding: 0 !important;
         border-radius: 0 !important;
     }
+    
+    .mobile-nav-dropdown {
+        display: none !important;
+    }
 }
 
 .nav-link {
@@ -356,10 +360,11 @@ body::after {
     font-weight: 600;
 }
 
-/* モバイルプルダウンメニュー */
+/* ハンバーガーメニュー */
 .mobile-nav-dropdown {
     display: none;
     position: relative;
+    margin-left: auto; /* 右端に配置 */
 }
 
 .mobile-nav-button {
@@ -382,12 +387,41 @@ body::after {
     transform: translateY(-1px);
 }
 
-.dropdown-arrow {
-    transition: transform 0.3s ease;
+/* ハンバーガーメニューのスタイル */
+.hamburger-menu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    gap: 4px;
 }
 
-.mobile-nav-button.active .dropdown-arrow {
-    transform: rotate(180deg);
+.hamburger-line {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* 従来のドロップダウン矢印は非表示 */
+.dropdown-arrow {
+    display: none;
 }
 
 .mobile-nav-menu {
@@ -405,15 +439,15 @@ body::after {
     margin: 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-20px) translateY(-10px);
+    transform: translateX(20px) translateY(-10px);
     transition: all 0.3s ease;
-    z-index: 1001;
+    z-index: 1050;
 }
 
 .mobile-nav-menu.active {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-20px) translateY(0);
+    transform: translateX(0px) translateY(0);
 }
 
 .mobile-nav-menu li {
@@ -442,23 +476,23 @@ body::after {
     border-left-color: #2563eb;
 }
 
-/* レスポンシブ対応 */
+/* レスポンシブ対応 - モバイルでハンバーガーメニューを表示 */
 @media screen and (max-width: 768px) {
     .desktop-nav {
-        display: none !important;
+        display: none !important; /* 通常メニューを非表示 */
     }
     
     .mobile-nav-dropdown {
-        display: block;
+        display: block !important; /* ハンバーガーメニューを表示 */
         position: relative;
-        width: 100%;
-        max-width: 250px;
+        margin-left: auto; /* 右端に配置 */
     }
     
     .nav-container {
         padding: 0 20px;
         justify-content: space-between;
         align-items: center;
+        height: 70px;
     }
     
     .mobile-nav-menu {
@@ -469,19 +503,22 @@ body::after {
         width: 280px;
         max-width: calc(100vw - 40px);
         margin: 0;
-        transform: translateX(-20px) translateY(-10px);
+        transform: translateX(20px) translateY(-10px);
         border: 1px solid #e5e7eb;
     }
     
     .mobile-nav-menu.active {
-        transform: translateX(-20px) translateY(0);
+        transform: translateX(0px) translateY(0);
     }
 }
 
 @media screen and (max-width: 480px) {
+    .nav-container {
+        padding: 0 15px; /* 小さい画面では少し狭く */
+    }
+    
     .mobile-nav-dropdown {
-        width: 100%;
-        max-width: 180px;
+        margin-left: auto; /* 確実に右端に配置 */
     }
     
     .mobile-nav-button {
@@ -489,9 +526,20 @@ body::after {
         font-size: 13px;
     }
     
+    .hamburger-menu {
+        width: 40px;
+        height: 40px;
+        padding: 6px;
+    }
+    
+    .hamburger-line {
+        width: 20px;
+        height: 2px;
+    }
+    
     .mobile-nav-menu {
-        right: 10px;
-        left: 10px;
+        width: 250px; /* 少し狭く */
+        max-width: calc(100vw - 30px);
     }
 }
 
@@ -504,6 +552,19 @@ body::after {
     position: relative;
     z-index: 1;
     overflow: visible; /* スクロール可能に変更 */
+}
+
+/* モバイル表示時のページヘッダー調整 */
+@media screen and (max-width: 768px) {
+    .page-header {
+        margin-top: 100px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-header {
+        margin-top: 110px !important;
+    }
 }
 
 .page-header-content {
@@ -538,6 +599,25 @@ body::after {
     image-rendering: crisp-edges;
     /* ホバー可能エリアとしてカーソル設定 */
     cursor: pointer;
+    z-index: 1;
+}
+
+/* モバイル表示時のヒーローセクション調整 */
+@media screen and (max-width: 768px) {
+    .hero-modern {
+        margin-top: 100px; /* モバイル時はヘッダー + 余白を十分に確保 */
+        min-height: 300px;
+        max-height: calc(100vh - 100px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-modern {
+        margin-top: 110px; /* 小さい画面ではさらに大きく調整 */
+        min-height: 250px;
+        max-height: calc(100vh - 110px);
+        aspect-ratio: 4 / 3; /* 縦長の比率に調整 */
+    }
 }
 
 /* ホバー時の画像切り替えエフェクト */

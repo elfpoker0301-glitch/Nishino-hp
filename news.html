@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-826WEQGEBC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-826WEQGEBC');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>お知らせ一覧 | 株式会社ニシボ</title>
@@ -59,13 +68,12 @@
                     </li>
                 </ul>
                 
-                <!-- モバイルプルダウンメニュー -->
+                <!-- ハンバーガーメニュー -->
                 <div class="mobile-nav-dropdown">
-                    <button class="mobile-nav-button" id="mobile-nav-button">
-                        <span>メニュー</span>
-                        <svg class="dropdown-arrow" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                            <path d="M8 10.5L12 6.5L4 6.5L8 10.5Z"/>
-                        </svg>
+                    <button class="mobile-nav-button hamburger-menu" id="mobile-nav-button">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
                     </button>
                     <ul class="mobile-nav-menu" id="mobile-nav-menu">
                         <li><a href="index.html" class="mobile-nav-link">ホーム</a></li>
