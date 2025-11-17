@@ -31,6 +31,11 @@
 [forms]
   spam-filter = true
 
+# フォーム通知設定
+[[forms.contact]]
+  name = "contact"
+  subject = "【ニシボHP】新しいお問い合わせが届きました"
+
 # リダイレクト設定（必要に応じて）
 [[redirects]]
   from = "/contact"
